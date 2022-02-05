@@ -6,3 +6,7 @@ body{
 .navbar{
     padding-top: 0!important;
 }
+.img-logo{
+    height: 15rem;
+    width: 15rem;
+}
