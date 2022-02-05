@@ -6,3 +6,7 @@ body{
 .navbar{
     padding-top: 0!important;
 }
+
+.d-block{
+    height: 45rem!important;
+}
