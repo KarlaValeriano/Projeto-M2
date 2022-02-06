@@ -8,8 +8,8 @@ $(document).ready(function () {
         $("#uf").val(``);
     }
     $("#cep").blur(function () {
-        var cep = $(this).val().replace(/[^\d]/g,' ');
-        if (cep != '') {
+        var cep = $("#cep").val().replace(/[^\d]/g,'');
+        if (cep != ' ') {
             var validaCep = /^[0-9]{8}$/;
             var correios = `https://viacep.com.br/ws/${cep}/json/?`;
             if (validaCep.test(cep)) {
@@ -33,10 +33,12 @@ $(document).ready(function () {
                         alert(`CEP inválido`);
                     }
                 });
-            } else {
+            }else {
+                console.log('teste');
                 limpaFormulario();
             }
         }
     });
 
 });
+regExpEmail = input.match()
