@@ -17,20 +17,37 @@ class cliente {
     }
 }
 
+class gerenciador{
+    constructor(){
+        this.contas = [];
+    }
+
+    entrada(...conta){
+        for(let i =0;i<conta.length; i++){
+            this.contas.push(conta[i])
+        }
+    }
+}
 
 
 
-function cadastrar(event) {
-   
+
+function cadastrar() {
+     
     let clienteNome=$("#form-nome").val();
     let clienteEmail=$("#form-email").val();
     let clienteUsuario=$("#form-usuario").val();
     let clienteSenha= $("#form-senha").val();
 
     const cliente1 = new cliente();
-    cliente1.nome = clienteNome
-    cliente1.email = clienteEmail
-    cliente1.usuario = clienteUsuario
-    cliente1.senha = clienteSenha
-    console.log(cliente1);
+    cliente1.nome = clienteNome;
+    cliente1.email = clienteEmail;
+    cliente1.usuario = clienteUsuario;
+    cliente1.senha = clienteSenha;
+    let conta = new gerenciador();
+    
+   
+    localStorage.setItem('conta', JSON.stringify(cliente1));
+    conta.entrada(JSON.parse(localStorage.getItem('conta')));
+    console.log(conta);
 }
