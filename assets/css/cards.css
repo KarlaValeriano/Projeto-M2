@@ -2,7 +2,9 @@
     box-sizing: border-box;
     margin-top: 4rem;
     width: 70%;
-    height: 50vh;}
+    height: 50vh;
+
+}
 .wrapper{
     max-width: 1090px;
     width: 100%;
