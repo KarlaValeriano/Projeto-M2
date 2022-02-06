@@ -1,0 +1,68 @@
+@media screen and (max-width: 700px){
+    .img-logo{
+        display: none;
+    }
+    .carrocel{
+        display: none!important;
+        
+    }
+    
+    .wrapper .table{
+      width: 100%;
+    }
+  
+    .table.premium{
+      margin: 40px 0px;
+    }
+    .table.ultimate{
+      margin: 0px;
+    }
+  }
+  
+  ::selection{
+    color:#fff;
+  }
+  
+  .table .ribbon{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+  }
+  
+  .table .ribbon::before,
+  table .ribbon::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    display: block;
+    border: 7px solid #ba24f0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  
+  .table .ribbon::before{
+    top: 0px;
+    right: 15px;
+  }
+  
+  .table .ribbon::after{
+    bottom: 15px;
+    left: 0px;
+  }
+  
+  .table .ribbon span{
+    position: absolute;
+    top:30px;
+    right: 0;
+    transform: rotate(-45deg);
+    width: 200px;
+    background: #ba24f0;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+  }

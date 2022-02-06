@@ -1,7 +1,15 @@
 body{
+    width: 100%;
+    height: 100vh;
     padding-top: 100px;
 
     background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 .navbar{
     padding-top: 0!important;
@@ -10,17 +18,8 @@ body{
     height: 10rem;
     width: 12rem;
 }
-.car-img{
-    width: 100%!important;
-    height: 50rem!important;
+
+div{
+    border-top: none!important;
 }
-.box-img-car-descricao{
-    background: transparent;
-    backdrop-filter: blur(5px);
-}
-.titulo-car{
-    color: #FDC501;
-    font-size: 2em;
-    text-shadow: 10px 4px 4px black;
-   
-}
+  

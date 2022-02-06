@@ -11,13 +11,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/caroulse.css">
+    <link rel="stylesheet" href="assets/css/mediaQ.css">
     <title>Cyber Pereirão | Home</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container-fluid" style="background-color:rgb(255,217,100);">
+            <div class="container-fluid" style="background-color:#FDC501;">
                 <a class="navbar-brand" href="#">
                     <h1> <img src="logo.png" class="img-logo"> Cyber Pereirão</h1>
                 </a>
@@ -55,7 +58,7 @@
             </div>
         </nav>
     </header>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide carrocel" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -67,7 +70,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
                 <img src="assets/img/teste2.jpg" class="d-block car-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block box-img-car-descricao">
                     <h5 class="titulo-car"></h5>
                     <p></p>
                 </div>
@@ -81,7 +84,7 @@
             </div>
             <div class="carousel-item" data-bs-interval="10000">
                 <img src="assets/img/teste3.jpg" class="d-block  car-img" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block box-img-car-descricao">
                     <h5 class="titulo-car">Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
                 </div>
@@ -99,7 +102,119 @@
         </button>
     </div>
     <main>
+        <section class="apresentacao-produto">
+            
+        </section>
     </main>
+    <section class="cartao-container">
+        <div class="wrapper">
+            <div class="table basic">
+              <div class="head_tab"><h2>Teste</h2><br> Titulo</h2></div>
+              <div class="aj_p"><p>Teste subtitulo</p></div>
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                    <span class="text">R$</span>
+                    <span class="price">29<span style="font-size:12px">/Reais</span></span>
+        
+                  </div>
+                </div>
+              </div>
+              <div class="package-name"></div>
+              <ul class="features">
+                <div class="btn"><button>Teste Botao</button></div>
+                <p class="aj_des">Teste fidelidade</p>
+                <li>
+                  <span class="list-name">1 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">2 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">3 item</span>
+                  <span class="icon cross"><i class="fas fa-times"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">4 item</span>
+                  <span class="icon cross"><i class="fas fa-times"></i></span>
+                </li>
+              </ul>
+              <div><h2>See all features <span class="icon cross"><i class="fa fa-angle-down"></i></span></h2></div>
+            </div>
+            <div class="table premium">
+              <div class="head_tab"><h2>Teste <br>Titulo</h2></div>
+              <div class="aj_p"><p>Teste subtitulo</p></div>
+              <div class="ribbon"><span>Teste destaque</span></div>
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                    <span class="text">R$</span>
+                    <span class="price">59<span style="font-size:12px">/Reais</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="package-name"></div>
+              <ul class="features">
+                <div class="btn"><button>Teste botão</button></div>
+                <p class="aj_des">Teste fidelidade</p>
+                <li>
+                  <span class="list-name">1 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name"> 2item </span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">3 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">4 item</span>
+                  <span class="icon cross"><i class="fas fa-times"></i></span>
+                </li>
+              </ul>
+              <div class="premium_all"><h2>See all features <span class="icon cross"><i class="fa fa-angle-down"></i></span></h2></div>
+            </div>
+            <div class="table ultimate">
+              <div class="head_tab"><h2>Teste <br>Titulo</h2></div>
+              <div class="aj_p"><p>Teste subtitulo</p></div>
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                    <span class="text">R$</span>
+                    <span class="price">99<span style="font-size:12px">/Reais</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="package-name"></div>
+              <ul class="features">
+                <div class="btn"><button>Teste botão</button></div>
+                <p class="aj_des">Teste fidelidade</p>
+                <li>
+                  <span class="list-name">1 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">2 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">3 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">4 item</span>
+                  <span class="icon check"><i class="fas fa-check"></i></span>
+                </li>
+              </ul>
+              <div><h2>See all features <span class="icon cross"><i class="fa fa-angle-down"></i></span></h2></div>
+            </div>
+          </div>
+
+    </section>
 </body>
 
 
