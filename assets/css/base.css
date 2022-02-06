@@ -7,6 +7,20 @@ body{
     padding-top: 0!important;
 }
 .img-logo{
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 12rem;
+}
+.car-img{
+    width: 100%!important;
+    height: 50rem!important;
+}
+.box-img-car-descricao{
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+.titulo-car{
+    color: #FDC501;
+    font-size: 2em;
+    text-shadow: 10px 4px 4px black;
+   
 }
