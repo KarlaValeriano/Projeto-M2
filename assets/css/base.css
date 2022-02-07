@@ -22,4 +22,11 @@ body{
 div{
     border-top: none!important;
 }
-  
+footer {
+    color: #FDC501;
+    background-color: #000000da;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    
+}

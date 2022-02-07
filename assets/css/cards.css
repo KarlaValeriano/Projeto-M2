@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin-top: 4rem;
     width: 70%;
-    height: 50vh;}
+    height: fit-content;}
 .wrapper{
     max-width: 1090px;
     width: 100%;
@@ -10,6 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
   }
   .wrapper .table{
     background: #fff;
@@ -41,7 +42,7 @@
   }
   
   .table.premium {
-    margin: -20px;
+    
   }
   
   .premium_all {
