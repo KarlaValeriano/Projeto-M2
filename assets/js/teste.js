@@ -36,4 +36,10 @@ $(document).ready(function(){
             $("#img-senha2").attr('src', 'assets/icons/cancelar.png')
            )
         });
+
+        $("#mostraSenha").on('click', function(){
+           let type = $("#senha").attr('type') === 'password' ?'text':'password';
+            $("#form-senha").attr('type', type);
+            console.log(type === 'password');
+        });
 });
