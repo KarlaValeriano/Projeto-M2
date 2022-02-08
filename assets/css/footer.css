@@ -1,0 +1,41 @@
+footer {
+    color: #FDC501;
+    background-color: #000000da;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.rodape{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 30rem;
+}
+a{
+    text-decoration: none;
+    color:#FDC501 ;
+}
+
+.sociais li{
+    margin: 0 10px;
+
+}
+.sociais{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.fa{
+    color:#FDC501;
+}
+.rodape p{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
