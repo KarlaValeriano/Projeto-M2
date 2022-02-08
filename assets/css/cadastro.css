@@ -1,0 +1,17 @@
+
+body{
+    background-color: aquamarine;
+    padding-top: 40px;
+}
+h11 {
+    color:red;
+}
+
+#logo {
+        width:50%;
+        height:50%;
+}
+
+.panel-heading{
+    font-size:130%;
+}
