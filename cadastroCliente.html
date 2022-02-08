@@ -42,6 +42,9 @@
         display: flex;
         align-items: center;
     }
+    #mostraSenha{
+        margin-left: -30;
+    }
 </style>
 
 <head>
@@ -52,6 +55,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/apiCep.js"></script>
+    <!-- <script src="assets/js/cadastroCliente.js"></script> -->
     <script src="assets/js/teste.js"></script>
     <title>Cadastro</title>
 </head>
@@ -60,7 +64,7 @@
     <header>
     </header>
     <main>
-        <form action="#" class="formulario">
+        <form action="user.html" class="formulario">
             <div class="form-text">
                 <label for="nome">Nome</label>
                 <input type="text" placeholder="Digite seu nome" id="form-nome" name="nome" required>
@@ -76,11 +80,11 @@
             </div>
             <div class="form-text">
                 <label for="senha">Senha</label>
+                <i class="bi bi-eye-slash" id="mostraSenha"></i>
                 <input type="password" name="senha" placeholder="Digite sua senha" id="form-senha" autocomplete
-                    required>
+                    required > 
                 <div class="form-alerta">
                     <img src="" alt="" id="img-senha">
-                    <i class="bi bi-eye-slash" id="mostraSenha"></i>
                     <small id="msg-senha"></small>
                 </div>
 

@@ -31,21 +31,16 @@ class cliente {
 }
 
 function cadastrar() {
-    let senhaForte = 
-
-    // const cliente1 = new cliente();    
-    // cliente1.nome = $("#form-nome").val();
-    // cliente1.email = $("#form-email").val();
-    // cliente1.usuario = $("#form-usuario").val();
-    // cliente1.senha = $("#form-senha").val();
-
-
-
-    localStorage.setItem('conta', JSON.stringify(cliente1));    
-
+    const cliente1 = new cliente();    
+    cliente1.nome = $("#form-nome").val();
+    cliente1.email = $("#form-email").val();
+    cliente1.usuario = $("#form-usuario").val();
+    cliente1.senha = $("#form-senha").val();
+    
+    localStorage.setItem('conta', JSON.stringify(cliente1));
 }
 
-// teste = JSON.parse(localStorage.getItem('conta'));
+teste = JSON.parse(localStorage.getItem('conta'));
 //     console.log(teste);
 //     console.log(teste._nome);
 //     console.log(teste._email);
@@ -65,4 +60,4 @@ function cadastrar() {
 // }
 
 // console.log(emailOk('eduardo@email.com'));
-console.log(senhaForte('eduzTaou@1234'));
+// console.log(senhaForte('eduzTaou@1234'));
