@@ -1,0 +1,23 @@
+
+body{
+    background-color: white;
+    padding-top: 40px;
+}
+h11 {
+    color:red;
+}
+
+#logo {
+        width:50%;
+        height:50%;
+}
+
+.panel-heading{
+    font-size:130%;
+}
+.form-div{
+    padding: 0!important;
+}
+.form-div input{
+    padding: 0!important;
+}
