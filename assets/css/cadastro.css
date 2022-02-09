@@ -1,6 +1,6 @@
 
 body{
-    background-color: aquamarine;
+    background-color: white;
     padding-top: 40px;
 }
 h11 {
@@ -14,4 +14,10 @@ h11 {
 
 .panel-heading{
     font-size:130%;
+}
+.form-div{
+    padding: 0!important;
+}
+.form-div input{
+    padding: 0!important;
 }
