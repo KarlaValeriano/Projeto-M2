@@ -11,7 +11,7 @@
 <body>
 
 <form class="form-horizontal">
-<fieldset style="width: 75%;  margin: 0px auto;">
+<fieldset style="width: 110%;  margin: 0px auto;">
 <div class="panel panel-primary">
     <div class="panel-heading">Cadastro de Cliente</div>
     
@@ -33,11 +33,13 @@
 <div class="form-group">
   <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>  
   <div class="col-md-2">
-  <input id="" name="cpf" placeholder="Digite sua senha" class="form-control input-md" required="" type="password">
+  <input id="" name="cpf" placeholder="Digite a senha" class="form-control input-md" required="" type="password">
+  <small>teste de texto</small>
   </div>
   <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>  
   <div class="col-md-2">
-  <input id="" name="cpf" placeholder="Confirme a senha" class="form-control input-md" required="" type="password">
+  <input id="" name="cpf" placeholder="Repita a senha" class="form-control input-md" required="" type="password">
+  <small>teste de texto</small>
 </div>
 
   <!-- <label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
@@ -80,6 +82,7 @@
       <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
       <input id="prependedtext" name="prependedtext" class="form-control" placeholder="email@email.com" required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
     </div>
+    <small>teste de texto</small>
   </div>
 </div>
 
@@ -87,7 +90,8 @@
 <div class="form-group">
   <label class="col-md-2 control-label" for="CEP">CEP <h11>*</h11></label>
   <div class="col-md-2">
-    <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
+    <input id="cep" name="cep" placeholder="" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
+    <small>teste de texto</small>
   </div>
   <div class="col-md-2">
       <button type="button" class="btn btn-primary" onclick="pesquisacep(cep.value)">Pesquisar</button>

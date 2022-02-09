@@ -12,12 +12,7 @@ h11 {
         height:50%;
 }
 
-.panel-heading{
-    font-size:130%;
-}
-.form-div{
+input{
     padding: 0!important;
-}
-.form-div input{
-    padding: 0!important;
+    font-size: 1rem!important;
 }
