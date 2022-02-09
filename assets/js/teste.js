@@ -60,10 +60,10 @@ $(document).ready(function(){
             $("#form-submit").attr('disabled', true);
            }
         });
-
-        $("#mostraSenha").on('click', function(){
-           let type = $("#form-senha").attr('type') === 'password'?'text':'password';
-            $("#form-senha").attr('type', type);
-            $("#mostraSenha").toggleClass('bi-eye');
-        });
+        
+        $(".mostraSenha").on('click', function(){
+            let type = $(".form-senha").attr('type') === 'password'?'text':'password';
+             $(".form-senha").attr('type', type);
+             $(".mostraSenha").toggleClass('glyphicon-eye-close');
+         });
 });

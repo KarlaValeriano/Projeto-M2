@@ -1,157 +1,131 @@
 <!DOCTYPE html>
 <head>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" defer></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js" defer></script>
-<link rel="stylesheet" href="./assets/css/base.css">
-<script src="./assets/js/index.js" defer></script>
-
-    
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" defer></script>
+  <link rel="stylesheet" href="./assets/css/cadastro.css">
+  <script src="assets/js/teste.js" defer></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/apiCep.js" defer></script>
+  <script src="./assets/js/index.js" defer></script>
 </head>
 <body>
+  <form class="form-horizontal">
+    <fieldset style="width: 110%;  margin: 0px auto;">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Cadastro de Cliente</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <div class="col-md-11 control-label">
+              <p class="help-block">
+                <h11>*</h11>Campo Obrigatório
+              </p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="Nome">Nome<h11>*</h11></label>
+            <div class="col-md-8">
+              <input id="form-nome" name="Nome" placeholder="Digite seu nome" class="form-control input-md" required=""
+                type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="email">Email<h11>*</h11></label>
+            <div class="col-md-5">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input id="form-email" name="email" class="form-control" placeholder="email@email.com" required
+                  type="email">
+              </div>
+              <div class="form-alerta">
+                <img src="" alt="" id="img-email" class="img-alerta">
+                <small id="msg-email"></small>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>
+            <div class="col-md-2">
+              <div class="input-group">
+                <span class="input-group-addon"><i id="" class="glyphicon glyphicon-eye-open mostraSenha"></i></span>
+                <input id="form-senha" name="senha" placeholder="Digite a senha" class="form-control input-md form-senha"
+                  required="" type="password">
+              </div>
+              <div class="form-alerta">
+                <img src="" alt="" id="img-senha" class="img-alerta">
+                <small id="msg-senha"></small>
+              </div>
+            </div>
+            <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>
+            <div class="col-md-2">
+              <div class="input-group">
+                <span class="input-group-addon"><i id="" class="glyphicon glyphicon-eye-open mostraSenha"></i></span>
+                <input id="form-senha2" name="senha" placeholder="Repita a senha" class="form-control input-md form-senha"
+                  required="" type="password">
+              </div>
+              <div class="form-alerta">
+                <img src="" alt="" id="img-senha2" class="img-alerta">
+                <small id="msg-senha2"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="cep">CEP<h11>*</h11></label>
+          <div class="col-md-2">
+            <input id="cep" name="cep" placeholder="CEP" class="form-control input-md" required type="search">
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Pesquisar</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="rua">Endereço</label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-addon">Rua</span>
+              <input id="rua" name="rua" class="form-control" placeholder="" required readonly="readonly" type="text">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">Nº<h11>*</h11></span>
+              <input id="numero" name="numero" class="form-control" placeholder="" required="" type="text">
+            </div>
+          </div>
 
-<form class="form-horizontal">
-<fieldset style="width: 110%;  margin: 0px auto;">
-<div class="panel panel-primary">
-    <div class="panel-heading">Cadastro de Cliente</div>
-    
-    <div class="panel-body">
-<div class="form-group">
-
-<div class="col-md-11 control-label">
-        <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
-</div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>  
-  <div class="col-md-8">
-  <input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>  
-  <div class="col-md-2">
-  <input id="" name="cpf" placeholder="Digite a senha" class="form-control input-md" required="" type="password">
-  <small>teste de texto</small>
-  </div>
-  <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>  
-  <div class="col-md-2">
-  <input id="" name="cpf" placeholder="Repita a senha" class="form-control input-md" required="" type="password">
-  <small>teste de texto</small>
-</div>
-
-  <!-- <label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
-  <div class="col-md-4"> 
-    <label required="" class="radio-inline" for="radios-0" >
-      <input name="sexo" id="sexo" value="feminino" type="radio" required>
-      Feminino
-    </label> 
-    <label class="radio-inline" for="radios-1">
-      <input name="sexo" id="sexo" value="masculino" type="radio">
-      Masculino
-    </label>
-  </div> -->
-</div>
-
-<!-- <div class="form-group">
-  <label class="col-md-2 control-label" for="prependedtext">Telefone <h11>*</h11></label>
-  <div class="col-md-2">
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX" required="" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
-      OnKeyPress="formatar('## #####-####', this)">
-    </div>
-  </div> -->
-  
-    <!-- <label class="col-md-1 control-label" for="prependedtext">Telefone</label>
-     <div class="col-md-2">
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13"  pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
-      OnKeyPress="formatar('## #####-####', this)">
-    </div>
-  </div> -->
- </div> 
-
-<div class="form-group">
-  <label class="col-md-2 control-label" for="prependedtext">Email <h11>*</h11></label>
-  <div class="col-md-5">
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="email@email.com" required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
-    </div>
-    <small>teste de texto</small>
-  </div>
-</div>
-
-
-<div class="form-group">
-  <label class="col-md-2 control-label" for="CEP">CEP <h11>*</h11></label>
-  <div class="col-md-2">
-    <input id="cep" name="cep" placeholder="" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
-    <small>teste de texto</small>
-  </div>
-  <div class="col-md-2">
-      <button type="button" class="btn btn-primary" onclick="pesquisacep(cep.value)">Pesquisar</button>
-    </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label" for="prependedtext">Endereço</label>
-  <div class="col-md-4">
-    <div class="input-group">
-      <span class="input-group-addon">Rua</span>
-      <input id="rua" name="rua" class="form-control" placeholder="" required="" readonly="readonly" type="text">
-    </div>
-    
-  </div>
-    <div class="col-md-2">
-    <div class="input-group">
-      <span class="input-group-addon">Nº <h11>*</h11></span>
-      <input id="numero" name="numero" class="form-control" placeholder="" required=""  type="text">
-    </div>
-  </div>
-  
-  <div class="col-md-3">
-    <div class="input-group">
-      <span class="input-group-addon">Bairro</span>
-      <input id="bairro" name="bairro" class="form-control" placeholder="" required="" readonly="readonly" type="text">
-    </div>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label" for="prependedtext"></label>
-  <div class="col-md-4">
-    <div class="input-group">
-      <span class="input-group-addon">Cidade</span>
-      <input id="cidade" name="cidade" class="form-control" placeholder="" required=""  readonly="readonly" type="text">
-    </div>
-  </div>
-  
-   <div class="col-md-2">
-    <div class="input-group">
-      <span class="input-group-addon">Estado</span>
-      <input id="estado" name="estado" class="form-control" placeholder="" required=""  readonly="readonly" type="text">
-    </div>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label" for="Cadastrar"></label>
-  <div class="col-md-8">
-    <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
-    <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
-  </div>
-</div>
-
-</div>
-</div>
-
-</fieldset>
-</form>
-
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon">Bairro</span>
+              <input id="bairro" name="bairro" class="form-control" placeholder="" required readonly="readonly"
+                type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="prependedtext"></label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-addon">Cidade</span>
+              <input id="cidade" name="cidade" class="form-control" placeholder="" required readonly="readonly"
+                type="text">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">Estado</span>
+              <input id="uf" name="estado" class="form-control" placeholder="" required readonly="readonly" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="Cadastrar"></label>
+          <div class="col-md-8">
+            <button id="form-submit" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </fieldset>
+  </form>
 </body>
 </html>
