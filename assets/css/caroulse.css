@@ -1,0 +1,16 @@
+.carrocel{
+    width: 100%!important;
+}
+.car-img{
+    width: 100%!important;
+    height: 50rem!important;
+}
+.box-img-car-descricao{
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+.titulo-car{
+    color: black;
+    font-size: 2em;
+    text-shadow:2px 4px 4px black;   
+}
