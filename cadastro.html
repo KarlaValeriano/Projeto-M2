@@ -3,14 +3,15 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" defer></script>
   <link rel="stylesheet" href="./assets/css/cadastro.css">
-  <script src="assets/js/teste.js" defer></script>
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <script src="assets/js/cadastro.js" defer></script>
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/apiCep.js" defer></script>
   <script src="./assets/js/index.js" defer></script>
 </head>
 <body>
   <form class="form-horizontal">
-    <fieldset style="width: 110%;  margin: 0px auto;">
+    <fieldset>
       <div class="panel panel-primary">
         <div class="panel-heading">Cadastro de Cliente</div>
         <div class="panel-body">
@@ -73,6 +74,10 @@
           <label class="col-md-2 control-label" for="cep">CEP<h11>*</h11></label>
           <div class="col-md-2">
             <input id="cep" name="cep" placeholder="CEP" class="form-control input-md" required type="search">
+            <div class="form-alerta">
+              <img src="" alt="" id="img-cep" class="img-alerta">
+              <small id="msg-cep"></small>
+            </div>
           </div>
           <div class="col-md-2">
             <button type="button" class="btn btn-primary">Pesquisar</button>
@@ -120,7 +125,7 @@
         <div class="form-group">
           <label class="col-md-2 control-label" for="Cadastrar"></label>
           <div class="col-md-8">
-            <button id="form-submit" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+            <button onclick="cadastrar()" id="form-submit" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
           </div>
         </div>
       </div>

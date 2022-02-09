@@ -3,31 +3,6 @@ class cliente {
     _email = this.email;
     _usuario = this.usuario;
     _senha = this._senha;
-    set nome(value) {
-        this._nome = value
-    }
-    set email(value) {
-        let ok = (/^([a-zA-Z][^<>\"!@[\]#$%¨&*()~^:;ç,\-´`=+{}º\|/\\?]{1,})@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi);
-        if(ok.test(value) == true){
-            $("#msg-email").text('')
-        this._email = value;
-        }else{
-            $("#msg-email").text(`Por favor, digite um e-mail válido`);
-        }
-    }
-    set usuario(value) {
-        this._usuario = value;
-    }
-    set senha(value) {
-        let ok = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/gi;
-        if(ok.test(value) == true){
-            $("#msg-senha").text(``);           
-            this._senha = value;
-        } else{
-            $("#msg-senha").text(`Por favor, digite uma senha forte (letra maiúscula, caractere especial e números)`);           
-        }
-        
-    }
 }
 
 function cadastrar() {

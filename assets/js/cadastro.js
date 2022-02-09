@@ -11,7 +11,7 @@ $(document).ready(function(){
                 $("#img-email").attr('src', 'assets/icons/verificado.png'),
                 $("#form-email").addClass('certo'),
                 $("#form-email").removeClass('erro'),
-                $("#form-senha").attr('disabled', false)               
+                $("#form-senha").attr('disabled', false)           
               ) : (
                 $("#msg-email").text(`e-mail inválido`),
                 $("#img-email").attr('src', 'assets/icons/cancelar.png'),
