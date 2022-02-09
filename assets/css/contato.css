@@ -1,0 +1,68 @@
+#picture{
+    border-radius: 50%;
+    margin-left: 3%;
+    padding: 0%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 7px 7px 0 rgba(50,50,50,0.22);
+    
+}
+.apresentaçao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:2rem 0;
+}
+.card {
+    display: flex;
+    
+    align-items: center;
+    text-align: center;
+    
+    padding: 20px;
+    border-radius: 20px;
+    background-color:white;
+    box-shadow: 7px 13px 0 rgba(50,50,50,0.22);
+    transition: all 0.3s ease-out;
+    width: 20rem;
+    height: 400px;
+    margin:5px;
+    margin-top: 1.5rem;  
+    
+   
+}
+.card:hover{
+    transform: translate(-5px);
+    cursor: pointer;
+}
+#contato{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+  
+  flex-direction: row;
+  width: 80%;
+  
+}
+.listacontato{
+    display: grid;
+    gap: 1rem;
+    width: 80%;
+   grid-template-columns: 1fr 1fr 1fr;
+   margin-top: 1rem;
+
+}
+li{
+    list-style-type: none;
+}
+.imagem{
+
+ width: 50px;
+}
+  .imagem:hover {
+  fill:#FDC501;
+}

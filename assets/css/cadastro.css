@@ -1,0 +1,18 @@
+
+body{
+    background-color: white;
+    padding-top: 40px;
+}
+h11 {
+    color:red;
+}
+
+#logo {
+        width:50%;
+        height:50%;
+}
+
+input{
+    padding: 0!important;
+    font-size: 1rem!important;
+}
