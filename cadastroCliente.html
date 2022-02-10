@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+    }
+    .formulario{
+        display: grid;
+        gap: 1rem;
+    }
+    .form-text {
+        margin: 1px 0;
+        display: grid;
+        gap: 1px;
+        font-size: 1rem;
+    }
+    .form-text input{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+    }
+    .form-text input:focus{
+        outline: none;
+
+       background-image: linear-gradient(to right, white, #FDC501, white);
+    }
+    .erro{
+        border-bottom: solid red;
+        /* background-image: linear-gradient(to right, white, red, white); */
+    }
+    .certo{
+        border-bottom: solid green;
+    }
+
+    .form-text img {
+        height: 1rem;
+        margin: 0 4px;
+    }
+
+    .form-alerta {
+        display: flex;
+        align-items: center;
+    }
+    #mostraSenha{
+        margin-left: -30;
+    }
+</style>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/apiCep.js"></script>
+    <!-- <script src="assets/js/cadastroCliente.js"></script> -->
+    <script src="assets/js/teste.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <form action="user.html" class="formulario">
+            <div class="form-text">
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Digite seu nome" id="form-nome" name="nome" required>
+                <small></small>
+            </div>
+            <div class="form-text">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="example@email.com" id="form-email" required>
+                <div class="form-alerta">
+                    <img src="" alt="" id="img-email">
+                    <small id="msg-email"></small>
+                </div>
+            </div>
+            <div class="form-text">
+                <label for="senha">Senha</label>
+                <i class="bi bi-eye-slash" id="mostraSenha"></i>
+                <input type="password" name="senha" placeholder="Digite sua senha" id="form-senha" autocomplete
+                    required > 
+                <div class="form-alerta">
+                   
+                    <small id="msg-senha"></small>
+                </div>
+
+            </div>
+            <div class="form-text">
+                <label for="senha2">Senha</label>
+                <input type="password" placeholder="Repita a senha" name="senha2" id="form-senha2" required>
+                <div class="form-alerta">
+                    <img src="" alt="" id="img-senha2" class="img-senha2"><small id="msg-senha2"></small>
+                </div>
+            </div>
+            <!-- <input type="text" placeholder="digite seu CEP" id="cep">
+            <input type="text" placeholder="digite a rua" id="rua">
+            <input type="text" placeholder="digite o bairro" id="bairro">
+            <input type="text" placeholder="digite a cidade" id="cidade">
+            <input type="text" placeholder="digite o estado" id="uf"> -->
+            <input type="submit" value="enviar" id="form-submit" onclick="cadastrar()">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

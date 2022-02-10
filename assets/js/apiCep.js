@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     function limpaFormulario() {
          $("#cep").val(``);
@@ -18,7 +17,6 @@ $(document).ready(function () {
                 $("#bairro").val(`...`);
                 $("#cidade").val(`...`);
                $("#uf").val(`...`);
-
                 $.ajax({
                     url: correios,
                     success: function (dados) {
@@ -27,18 +25,21 @@ $(document).ready(function () {
                         $("#bairro").val(dados.bairro);
                         $("#cidade").val(dados.localidade);
                        $("#uf").val(dados.uf);
+                       $("#msg-cep").text(``);
+                       $("#img-cep").attr('src','assets/icons/verificado.png');
                     },
                     error: function () {
                         limpaFormulario();
-                        alert(`CEP inválido`);
+                        $("#msg-cep").text(`Cep não encontrado`);
+                        $("#img-cep").attr('src', 'assets/icons/cancelar.png');                        
                     }
                 });
             }else {
-                console.log('teste');
                 limpaFormulario();
+                $("#msg-cep").text(`Cep não encontrado`);
+                $("#img-cep").attr('src', 'assets/icons/cancelar.png');
             }
         }
     });
 
 });
-regExpEmail = input.match()

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" defer></script>
+  <link rel="stylesheet" href="./assets/css/cadastro.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <script src="assets/js/cadastro.js" defer></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/apiCep.js" defer></script>
+  <script src="./assets/js/index.js" defer></script>
+</head>
+<body>
+  <form class="form-horizontal">
+    <fieldset>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Cadastro de Cliente</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <div class="col-md-11 control-label">
+              <p class="help-block">
+                <h11>*</h11>Campo Obrigatório
+              </p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="Nome">Nome<h11>*</h11></label>
+            <div class="col-md-8">
+              <input id="form-nome" name="Nome" placeholder="Digite seu nome" class="form-control input-md" required=""
+                type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="email">Email<h11>*</h11></label>
+            <div class="col-md-5">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input id="form-email" name="email" class="form-control" placeholder="email@email.com" required
+                  type="email">
+              </div>
+              <div class="form-alerta">
+                <img src="" alt="" id="img-email" class="img-alerta">
+                <small id="msg-email"></small>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>
+            <div class="col-md-2">
+              <div class="input-group">
+                <span class="input-group-addon"><i id="" class="glyphicon glyphicon-eye-open mostraSenha"></i></span>
+                <input id="form-senha" name="senha" placeholder="Digite a senha" class="form-control input-md form-senha"
+                  required="" type="password">
+              </div>
+              <div class="form-alerta">
+                <img src="" alt="" id="img-senha" class="img-alerta">
+                <small id="msg-senha"></small>
+              </div>
+            </div>
+            <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>
+            <div class="col-md-2">
+              <div class="input-group">
+                <span class="input-group-addon"><i id="" class="glyphicon glyphicon-eye-open mostraSenha"></i></span>
+                <input id="form-senha2" name="senha" placeholder="Repita a senha" class="form-control input-md form-senha"
+                  required="" type="password">
+              </div>
+              <div class="form-alerta">
+                <img src="" alt="" id="img-senha2" class="img-alerta">
+                <small id="msg-senha2"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="cep">CEP<h11>*</h11></label>
+          <div class="col-md-2">
+            <input id="cep" name="cep" placeholder="CEP" class="form-control input-md" required type="search">
+            <div class="form-alerta">
+              <img src="" alt="" id="img-cep" class="img-alerta">
+              <small id="msg-cep"></small>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Pesquisar</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="rua">Endereço</label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-addon">Rua</span>
+              <input id="rua" name="rua" class="form-control" placeholder="" required readonly="readonly" type="text">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">Nº<h11>*</h11></span>
+              <input id="numero" name="numero" class="form-control" placeholder="" required="" type="text">
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon">Bairro</span>
+              <input id="bairro" name="bairro" class="form-control" placeholder="" required readonly="readonly"
+                type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="prependedtext"></label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-addon">Cidade</span>
+              <input id="cidade" name="cidade" class="form-control" placeholder="" required readonly="readonly"
+                type="text">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">Estado</span>
+              <input id="uf" name="estado" class="form-control" placeholder="" required readonly="readonly" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="Cadastrar"></label>
+          <div class="col-md-8">
+            <button onclick="cadastrar()" id="form-submit" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
