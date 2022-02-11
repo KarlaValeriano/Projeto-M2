@@ -71,12 +71,7 @@ form button{
   }
   
 .olhinho{
-    height: 1rem;
-    background-image: url(../icons/eye.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    
+    padding: 1rem 0;   
     border: #ced4da;
     width: 27px;
     height: auto;
