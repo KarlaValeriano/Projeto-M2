@@ -1,12 +1,58 @@
-form{
-    width: 80%;
-    margin-left:  1.222rem;
-    padding: 2rem 0;
-   
+.pagina-cadastro{
+    font-size: 1.5rem;
+    padding-top: 155px!important;
 }
+
+/* .panel-body{
+    padding: 0!important;
+} */
+.form-secao{
+    width: 100%;
+    font-size: 1rem;
+}
+form{
+    padding: 6rem!important;   
+}
+/* .form-control{
+    width: 50%!important;
+} */
 fieldset{
     width: 100%;     
 }
+.usuario{
+    display: grid;
+    gap: 1rem;
+}
+.senha{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.endereco{
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+form button{
+    margin-top: 1rem;
+}
+/* fieldset input{
+    font-size: 1.5rem!important;
+    width: 7rem!important;
+    padding: 0!important;
+} */
+/* fieldset span{
+    width: 4rem!important;
+}
+.input-group-addon{
+
+    width: 10rem!important;
+}
+.panel-heading{
+    font-size: 1.5rem!important;
+} */
 .img-alerta{    
     height: 1rem;
 }
@@ -18,5 +64,15 @@ fieldset{
     box-shadow:inset 0 120px 1px rgba(16, 195, 31, 0.08)!important;
   }
 .olhinho{
-    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url(../icons/eye.svg);
+    background-position: center;
+
+    border: #ced4da;
+    background-color: #ced4da;
+    width: 25px;
+    height: auto;
+    
+    margin-top: 0!important;
 }
