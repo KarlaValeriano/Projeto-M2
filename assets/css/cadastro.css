@@ -1,17 +1,35 @@
 .pagina-cadastro{
-    font-size: 1.5rem;
-    padding-top: 155px!important;
+    padding-top: 160px;
 }
 
-/* .panel-body{
-    padding: 0!important;
-} */
 .form-secao{
     width: 100%;
-    font-size: 1rem;
 }
+
 form{
-    padding: 6rem!important;   
+    padding: 6rem!important;
+}
+
+.usuario{
+    display: grid;
+    gap: 1rem;
+}
+
+.senha{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.endereco{
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+form button{
+    margin-top: 1rem;
 }
 /* .form-control{
     width: 50%!important;
@@ -60,17 +78,19 @@ form button{
 .erro{
   box-shadow:inset 0 120px 1px rgba(236, 25, 25, 0.08)!important;
 }
+
 .certo{
     box-shadow:inset 0 120px 1px rgba(16, 195, 31, 0.08)!important;
   }
+  
 .olhinho{
+    height: 1rem;
+    background-image: url(../icons/eye.svg);
     background-repeat: no-repeat;
     background-size: auto;
-    background-image: url(../icons/eye.svg);
     background-position: center;
-
+    
     border: #ced4da;
-    background-color: #ced4da;
     width: 25px;
     height: auto;
     

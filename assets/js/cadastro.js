@@ -65,6 +65,5 @@ $(document).ready(function(){
             event.preventDefault();
             let type = $(".form-senha").attr('type') === 'password'?'text':'password';
              $(".form-senha").attr('type', type);
-          
          });
 });
