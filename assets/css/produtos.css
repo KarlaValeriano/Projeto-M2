@@ -5,18 +5,71 @@
     background-color: #000000da;
 }
 
-#titProd{
-
-    text-align: center;
-    font-size: 2em;
-    text-transform: uppercase;
-    margin: 0 0 1em;
-	clear: left;
-    padding: 3% 0 3% 20%;
+.container-servico {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    box-shadow: 20px 20px 10px #FDC501;
 }
 
-.txtProd{
+.caixa-servicos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#titulo-caixa {
+    margin-left: 1rem;
+}
+
+.titulo-servico {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+}
+
+.subtitulo-servico {
+    margin: 2rem 1rem 2rem 1rem;
     text-align: justify;
+}
+
+.imagem-servicos {
+    float: left;
+	margin: 0 50px 20px 0;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 150px;
+    border: 3px solid #FDC501
+}
+
+#titulo-01 {
+    text-align: center;
+}
+
+.lista-servico {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.lista-um{
+    margin: 5rem;
+}
+
+.lista-dois{
+    margin: 4.5rem;
+}
+
+.item-lista-servico {
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+
+.itens-servico {
+    list-style-type: disc;
 }
 
 #btnserv {
@@ -26,8 +79,7 @@
     margin: 3% 0 0 50%;
 }
 
-#lamp {
-    width: 120px;
+#lamp { 
 	float: left;
 	margin: 0 20px 20px 0;
     width: 250px;
@@ -35,4 +87,11 @@
     overflow: hidden;
     border-radius: 150px;
     border: 5px solid #FDC501
+}
+
+#mundoweb {
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    border: 2px solid #FDC501
 }

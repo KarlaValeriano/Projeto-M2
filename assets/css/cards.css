@@ -2,7 +2,9 @@
     box-sizing: border-box;
     margin-top: 4rem;
     width: 70%;
-    height: fit-content;}
+    height: fit-content;
+  }
+
 .wrapper{
     max-width: 1090px;
     width: 100%;
@@ -32,7 +34,7 @@
   }
   
   .aj_p{
-    text-align: center;
+    text-align: justify;
   }
   
   p.aj_des {
@@ -126,12 +128,12 @@
   .basic .price-area,
   .basic .inner-area,
   .basic .head_tab h2{
-    color:red;
+    color:#FDC501;
   }
   
   .basic .btn button{
-    background: red;
-    color: #fff;
+    background: #FDC501;
+    color: #000000da;
     margin-top: -75px;
   }
   
@@ -144,12 +146,12 @@
   .premium .price-area,
   .premium .inner-area,
   .premium .head_tab h2{
-    color:#ba24f0;
+    color:#000000da;
   }
   
   .premium .btn button{
-    background: #ba24f0;
-    color: #fff;
+    background: #000000da;
+    color: #FDC501;
     margin-top: -75px;
   }
   
@@ -162,12 +164,12 @@
   .ultimate .price-area,
   .ultimate .inner-area,
   .ultimate .head_tab h2{
-    color:#f5b55a;
+    color:#FDC501;
   }
   
   .ultimate .btn button{
-    background: #f5b55a;
-    color: #fff;
+    background: rgb(254, 199, 1);
+    color: #000000da;
     margin-top: -75px;
   }
   
