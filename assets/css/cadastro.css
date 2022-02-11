@@ -1,9 +1,19 @@
-form{
-    width: 80%;
-    margin-left:  1.222rem;
-    padding: 2rem 0;
-   
+.pagina-cadastro{
+    padding-top: 160px;
 }
+
+.form-secao{
+    width: 100%;
+}
+
+form{
+    padding: 6rem!important;
+}
+
+.form-control{
+    width: 50%!important;
+}
+
 fieldset{
     width: 100%;     
 }
