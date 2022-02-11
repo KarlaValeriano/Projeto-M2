@@ -6,6 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/b70acdafcd.js" crossorigin="anonymous"></script>
   <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" defer></script> -->
   <link rel="stylesheet" href="./assets/css/cadastro.css">
@@ -39,7 +40,7 @@
                 </ul>
                 <div class="navbar-nav">
                     <li class="nav-item mx-4">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link active" aria-current="page" href="index.html">
                             <h4>Home</h4>
                         </a>
                     </li>
@@ -64,211 +65,85 @@
   
   <div class="form-row usuario">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Nome</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" class="form-control" id="" placeholder="Digite seu nome" required>
     </div>
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="form-email">
+      <label for="email">E-mail</label>
+      <input name="email" type="email" class="form-control" id="form-email" placeholder="Digite seu e-mail" required>
       <div class="form-alerta">
             <img src="" alt="" id="img-email" class="img-alerta">
-            <small id="msg-email">teste de texto</small>
+            <small id="msg-email"></small>
           </div>
     </div>
     
     <div class="senha">
-    <div class="form-group col-md-4">
-      <label for="inputPassword4">Senha</label>
+    <div class="form-group col-md-5">
+      <label for="senha">Senha</label>
       <div class="input-group">
         <button class="olhinho mostraSenha"></button>
-        <input type="password" class="form-control form-senha" id="form-senha">
+        <input type="password" class="form-control form-senha" id="form-senha" name="senha" placeholder="Digite a senha" required>
     </div>
       <div class="form-alerta">
             <img src="" alt="" id="img-senha" class="img-alerta">
-            <small id="msg-senha">teste de texto</small>
+            <small id="msg-senha"></small>
           </div>
           
           
     </div>
-    <div class="form-group col-md-4">
-      <label for="inputPassword4">Senha</label>
+    <div class="form-group col-md-5">
+      <label for="senha2">Senha</label>
       
       <div class="input-group">
         <button class="olhinho mostraSenha"></button>
-        <input type="password" class="form-control form-senha" id="form-senha2">
+        <input required type="password" class="form-control form-senha" id="form-senha2" name="senha2" placeholder="Repita a senha">
     </div>
       <div class="form-alerta">
             <img src="" alt="" id="img-senha2" class="img-alerta">
-            <small id="msg-senha2">teste de texto</small>
+            <small id="msg-senha2"></small>
           </div>
     </div>
     </div>
   </div>
   <div class="form-row endereco" >
   <div class="form-group col-md-4">
-    <label for="inputZip">CEP</label>
-    <input type="text" class="form-control" id="cep">
+    <label for="cep">CEP</label>
+    <input required type="text" class="form-control" id="cep" name="cep" placeholder="CEP">
     <div class="form-alerta">
       <img src="" alt="" id="img-cep" class="img-alerta">
-      <small id="msg-cep">teste de texto</small>
+      <small id="msg-cep"></small>
     </div>
   </div>
   <div class="form-group col-md-9">
     <label for="inputAddress">Logradouro</label>
-    <input type="text" class="form-control" id="rua" placeholder="1234 Main St">
+    <input required type="text" class="form-control" id="rua" placeholder="Nome da rua">
   </div>
   <div class="form-group col-md-2">
     <label for="inputZip">Número</label>
-    <input type="text" class="form-control" id="numero">
+    <input required type="text" class="form-control" id="numero" placeholder="">
   </div>
     <div class="form-group col-md-6">
       <label for="inputCity">Cidade</label>
-      <input type="text" class="form-control" id="cidade">
+      <input required type="text" class="form-control" id="cidade">
     </div>
     <div class="form-group col-md-4">
       <label for="inputCity">Bairro</label>
-      <input type="text" class="form-control" id="bairro">
+      <input required type="text" class="form-control" id="bairro">
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">UF</label>
-      <input type="text" class="form-control" id="uf">
+      <input required type="text" class="form-control" id="uf">
     </div>
   </div>
-
   <button id="form-submit" type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
 </section>
-
-  <!-- <form class="form-horizontal">
-    <fieldset>
-      <div class="panel panel-primary">
-        <div class="panel-heading">Cadastro de Cliente</div>
-        <div class="panel-body">
-          <div class="form-group">
-            <div class="col-md-11 control-label">
-              <p class="help-block">
-                <h11>*</h11>Campo Obrigatório
-              </p>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-2 control-label" for="Nome">Nome<h11>*</h11></label>
-            <div class="col-md-8">
-              <input id="form-nome" name="Nome" placeholder="Digite seu nome" class="form-control input-md" required=""
-                type="text">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-2 control-label" for="email">Email<h11>*</h11></label>
-            <div class="col-md-5">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                <input id="form-email" name="email" class="form-control" placeholder="email@email.com" required
-                  type="email">
-              </div>
-              <div class="form-alerta">
-                <img src="" alt="" id="img-email" class="img-alerta">
-                <small id="msg-email"></small>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>
-            <div class="col-md-2">
-              <div class="input-group">
-                <span class="input-group-addon"><i id="" class="glyphicon glyphicon-eye-open mostraSenha"></i></span>
-                <input id="form-senha" name="senha" placeholder="Digite a senha"
-                  class="form-control input-md form-senha" required="" type="password">
-              </div>
-              <div class="form-alerta">
-                <img src="" alt="" id="img-senha" class="img-alerta">
-                <small id="msg-senha"></small>
-              </div>
-            </div>
-            <label class="col-md-2 control-label" for="senha">Senha<h11>*</h11></label>
-            <div class="col-md-2">
-              <div class="input-group">
-                <span class="input-group-addon"><i id="" class="glyphicon glyphicon-eye-open mostraSenha"></i></span>
-                <input id="form-senha2" name="senha" placeholder="Repita a senha"
-                  class="form-control input-md form-senha" required="" type="password">
-              </div>
-              <div class="form-alerta">
-                <img src="" alt="" id="img-senha2" class="img-alerta">
-                <small id="msg-senha2"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-2 control-label" for="cep">CEP<h11>*</h11></label>
-          <div class="col-md-2">
-            <input id="cep" name="cep" placeholder="CEP" class="form-control input-md" required type="search">
-            <div class="form-alerta">
-              <img src="" alt="" id="img-cep" class="img-alerta">
-              <small id="msg-cep"></small>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <button type="button" class="btn btn-primary">Pesquisar</button>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-2 control-label" for="rua">Endereço</label>
-          <div class="col-md-4">
-            <div class="input-group">
-              <span class="input-group-addon">Rua</span>
-              <input id="rua" name="rua" class="form-control" placeholder="" required readonly="readonly" type="text">
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="input-group">
-              <span class="input-group-addon">Nº<h11>*</h11></span>
-              <input id="numero" name="numero" class="form-control" placeholder="" required="" type="text">
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="input-group">
-              <span class="input-group-addon">Bairro</span>
-              <input id="bairro" name="bairro" class="form-control" placeholder="" required readonly="readonly"
-                type="text">
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-2 control-label" for="prependedtext"></label>
-          <div class="col-md-4">
-            <div class="input-group">
-              <span class="input-group-addon">Cidade</span>
-              <input id="cidade" name="cidade" class="form-control" placeholder="" required readonly="readonly"
-                type="text">
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="input-group">
-              <span class="input-group-addon">Estado</span>
-              <input id="uf" name="estado" class="form-control" placeholder="" required readonly="readonly" type="text">
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-2 control-label" for="Cadastrar"></label>
-          <div class="col-md-8">
-            <button onclick="cadastrar()" id="form-submit" name="Cadastrar" class="btn btn-success"
-              type="Submit">Cadastrar</button>
-          </div>
-        </div>
-      </div>
-      </div>
-    </fieldset>
-  </form> -->
   <footer>
     <div class="rodape">
       <div class="text">
         <a href="contato.html" >
           <p>Contatos</p>
-        </a>       
-      
+        </a>     
       <p>serviços</p>
     </div>     
       <ul class="sociais">
