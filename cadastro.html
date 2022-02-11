@@ -68,7 +68,7 @@
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <input type="email" class="form-control" id="form-email">
       <div class="form-alerta">
             <img src="" alt="" id="img-email" class="img-alerta">
             <small id="msg-email">teste de texto</small>
@@ -78,50 +78,63 @@
     <div class="senha">
     <div class="form-group col-md-4">
       <label for="inputPassword4">Senha</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      <div class="input-group">
+        <button class="olhinho mostraSenha"></button>
+        <input type="password" class="form-control form-senha" id="form-senha">
+    </div>
       <div class="form-alerta">
-            <img src="" alt="" id="img-email" class="img-alerta">
-            <small id="msg-email">teste de texto</small>
+            <img src="" alt="" id="img-senha" class="img-alerta">
+            <small id="msg-senha">teste de texto</small>
           </div>
+          
+          
     </div>
     <div class="form-group col-md-4">
       <label for="inputPassword4">Senha</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      
+      <div class="input-group">
+        <button class="olhinho mostraSenha"></button>
+        <input type="password" class="form-control form-senha" id="form-senha2">
+    </div>
       <div class="form-alerta">
-            <img src="" alt="" id="img-email" class="img-alerta">
-            <small id="msg-email">teste de texto</small>
+            <img src="" alt="" id="img-senha2" class="img-alerta">
+            <small id="msg-senha2">teste de texto</small>
           </div>
     </div>
     </div>
   </div>
   <div class="form-row endereco" >
-  <div class="form-group col-md-3">
+  <div class="form-group col-md-4">
     <label for="inputZip">CEP</label>
-    <input type="text" class="form-control" id="inputZip">
+    <input type="text" class="form-control" id="cep">
     <div class="form-alerta">
-      <img src="" alt="" id="img-email" class="img-alerta">
-      <small id="msg-email">teste de texto</small>
+      <img src="" alt="" id="img-cep" class="img-alerta">
+      <small id="msg-cep">teste de texto</small>
     </div>
   </div>
   <div class="form-group col-md-9">
     <label for="inputAddress">Logradouro</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" id="rua" placeholder="1234 Main St">
+  </div>
+  <div class="form-group col-md-2">
+    <label for="inputZip">Número</label>
+    <input type="text" class="form-control" id="numero">
   </div>
     <div class="form-group col-md-6">
       <label for="inputCity">Cidade</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input type="text" class="form-control" id="cidade">
     </div>
     <div class="form-group col-md-4">
       <label for="inputCity">Bairro</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input type="text" class="form-control" id="bairro">
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">UF</label>
-      <input type="text" class="form-control" id="inputZip">
+      <input type="text" class="form-control" id="uf">
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button id="form-submit" type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
 </section>
 

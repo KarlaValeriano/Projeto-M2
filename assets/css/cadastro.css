@@ -52,4 +52,14 @@ fieldset{
   
 .olhinho{
     height: 1rem;
+    background-image: url(../icons/eye.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    
+    border: #ced4da;
+    width: 25px;
+    height: auto;
+    
+    margin-top: 0!important;
 }

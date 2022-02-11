@@ -61,9 +61,9 @@ $(document).ready(function(){
            }
         });
         
-        $(".mostraSenha").on('click', function(){
+        $(".mostraSenha").on('click', function(event){
+            event.preventDefault();
             let type = $(".form-senha").attr('type') === 'password'?'text':'password';
              $(".form-senha").attr('type', type);
-             $(".mostraSenha").toggleClass('glyphicon-eye-close');
          });
 });
