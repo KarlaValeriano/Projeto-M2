@@ -52,3 +52,6 @@ a:visited {
     background: #000000da;
     color: #000000da;
 }
+.invisivel{
+    display: none;
+}

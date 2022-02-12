@@ -1,4 +1,4 @@
-class cliente {
+class Cliente {
     _nome = this.nome;
     _email = this.email;
     _senha = this._senha;

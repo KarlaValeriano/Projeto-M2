@@ -7,11 +7,13 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/b70acdafcd.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./assets/css/cadastro.css">
+        <link rel="stylesheet" href="./assets/css/cadastro.css">
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/rodape.css">
   <link rel="stylesheet" href="./assets/css/HomeMediaQ.css">
+  <script src="assets/js/cadastroCliente.js"></script>
   <script src="assets/js/cadastro.js" defer></script>
+  <script src="assets/js/formularioControle.js" defer></script>
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/apiCep.js" defer></script>
   <script src="./assets/js/index.js" defer></script>
@@ -59,12 +61,11 @@
     </nav>
 </header>
 <section class="form-secao">
-<form>
-  
+<form action="index.html">  
   <div class="form-row usuario">
     <div class="form-group col-md-6">
       <label for="nome">Nome</label>
-      <input type="text" name="nome" class="form-control" id="" placeholder="Digite seu nome" required>
+      <input type="text" name="nome" class="form-control" id="form-nome" placeholder="Digite seu nome" required>
     </div>
     <div class="form-group col-md-6">
       <label for="email">E-mail</label>
@@ -79,21 +80,18 @@
     <div class="form-group col-md-5">
       <label for="senha">Senha</label>
       <div class="input-group">
-        <span class="input-group-addon"><i class="fa-solid fa-eye olhinho"></i></span>
+        <span class="input-group-addon"><i class="fa-solid fa-eye olhinho mostraSenha"></i></span>
         <input type="password" class="form-control form-senha" id="form-senha" name="senha" placeholder="Digite a senha" required>
     </div>
       <div class="form-alerta">
             <img src="" alt="" id="img-senha" class="img-alerta">
             <small id="msg-senha"></small>
-          </div>
-          
-          
+          </div>          
     </div>
     <div class="form-group col-md-5">
-      <label for="senha2">Senha</label>
-      
+      <label for="senha2">Senha</label>      
       <div class="input-group">
-        <span class="input-group-addon"><i class="fa-solid fa-eye olhinho"></i></span>
+        <span class="input-group-addon"><i class="fa-solid fa-eye olhinho mostraSenha"></i></span>
         <input required type="password" class="form-control form-senha" id="form-senha2" name="senha2" placeholder="Repita a senha">
     </div>
       <div class="form-alerta">
@@ -104,7 +102,7 @@
     </div>
   </div>
   <div class="form-row endereco" >
-  <div class="form-group col-md-4">
+  <div class="form-group col-md-5">
     <label for="cep">CEP</label>
     <input required type="text" class="form-control" id="cep" name="cep" placeholder="CEP">
     <div class="form-alerta">
@@ -116,7 +114,7 @@
     <label for="inputAddress">Logradouro</label>
     <input required type="text" class="form-control" id="rua" placeholder="Nome da rua">
   </div>
-  <div class="form-group col-md-2">
+  <div class="form-group col-md-5">
     <label for="inputZip">Número</label>
     <input required type="text" class="form-control" id="numero" placeholder="">
   </div>
@@ -124,16 +122,16 @@
       <label for="inputCity">Cidade</label>
       <input required type="text" class="form-control" id="cidade">
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="inputCity">Bairro</label>
       <input required type="text" class="form-control" id="bairro">
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-5">
       <label for="inputZip">UF</label>
       <input required type="text" class="form-control" id="uf">
     </div>
   </div>
-  <button id="form-submit" type="submit" class="btn btn-primary">Cadastrar</button>
+  <input id="form-submit" type="submit" class="form-submit"  onclick="cadastrar()">
 </form>
 </section>
   <footer>

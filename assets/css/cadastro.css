@@ -32,9 +32,6 @@ form{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-form button{
-    margin-top: 1rem;
-}
 fieldset{
     width: 100%;     
 }
@@ -52,10 +49,6 @@ fieldset{
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
-}
-
-form button{
-    margin-top: 1rem;
 }
 
 .img-alerta{    
@@ -77,5 +70,10 @@ form button{
     height: auto;
     
     margin-top: 0!important;
+
+    cursor: pointer;
+}
+.form-submit{
+    margin-top: 1rem;
 }
 

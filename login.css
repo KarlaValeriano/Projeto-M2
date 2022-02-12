@@ -61,6 +61,10 @@ form .data input{
     font-size: 17px;
     border: 1px  silver;
 }
+form .data input:focus{
+    border: 1px solid #FDC501;
+    outline: none;
+}
 form .esqueceu-senha{
     margin-top: -8px;
 }
@@ -102,6 +106,9 @@ form .btn button{
     letter-spacing: 1px;
     cursor: pointer;
 
+}
+form .btn button:focus{
+    outline: none;
 }
 
 form .login-link{
