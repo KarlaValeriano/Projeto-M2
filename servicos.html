@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="assets/css/rodape.css">
     <link rel="stylesheet" href="assets/css/contato.css">
     <link rel="stylesheet" href="assets/css/cards.css">
@@ -24,39 +25,61 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid" style="background-color:#FDC501;">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <h1> <img src="assets/img/logo.png" class="img-logo"> Cyber Pereirão</h1>
                 </a>
-
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     class="navbar-toggler" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <div class="navbar-nav">
-                        <li class="nav-item mx-4">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <h4>Home</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-4">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <h4>Serviços</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-4">
-                            <a href="contato.html" class="nav-link active" aria-current="page" href="#">
-                                <h4>Contatos</h4>
-                            </a>
-                        </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" aria-current="page" href="index.html">
+                                    <h4>Home</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" aria-current="page" href="servicos.html">
+                                    <h4>Serviços</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a href="contato.html" class="nav-link active" aria-current="page" href="contato.html">
+                                    <h4>Contatos</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <div class="form-login">
+                                    <input type="checkbox" id="show">
+                                    <label for="show" class="show-btn">Login</label>
+                                    <div class="container">
+                                        <label for="show" class="close-btn fas fa-times"></label>
+                                        <div class="texto">Login Form</div>
+                                        <form action="#">
+                                            <div class="data">
+                                                <label for="email">E-mail</label>
+                                                <input type="email" name="email" required>
+                                            </div>
+                                            <div class="data">
+                                                <label for="senha">Senha</label>
+                                                <input type="password" name="senha" required>
+                                            </div>
+                                            <div class="esqueceu-senha"><a href="#">Esqueceu a senha?</a></div>
+                                            <div class="btn">
+                                                <div class="inner"></div>
+                                                <button type="submit">Login</button>
+                                            </div>
+                                            <div class="login-link">Não possui conta? <a href="#">Faça o cadastro</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-
                 </div>
             </div>
         </nav>
