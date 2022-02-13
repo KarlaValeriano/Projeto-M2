@@ -30,17 +30,18 @@
             </div>
             <div class="sair-btn">
                 <div class="inner"></div>
-                <button id="logout">Sair</button>                
+                <button id="logout">Sair</button>
             </div>
         </div>
     </div>
     <div class="form-login">
         <input type="checkbox" id="show">
+        
         <label for="show" class="show-btn">Login</label>
         <div class="container">
             <label for="show" class="close-btn fas fa-times"></label>
             <div class="texto">Login Form</div>
-            <form action="#">
+            <form action="#" class="form-teste">
                 <div class="data">
                     <label for="email">E-mail</label>
                     <input type="email" name="email" required>
@@ -49,15 +50,51 @@
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" required>
                 </div>
-                <div class="esqueceu-senha"><a href="#">Esqueceu a senha?</a></div>
+                <div class="esqueceu-senha">
+                    <label for="recupera" class="texto-recupera">Esqueceu a senha?</label>
+                </div>
                 <div class="btn">
                     <div class="inner"></div>
-                   <button type="submit" id="login">Login</button>
+                    <button type="submit" id="login">Login</button>
                 </div>
                 <div class="login-link">Não possui conta? <a href="#">Faça o cadastro</a></div>
             </form>
         </div>
-    </div> 
+    </div>
+   
+    <div class="form-recupera">
+        <input type="checkbox" id="recupera">                                                 
+        <div class="container-recupera">
+            <label for="recupera" class="close-btn fas fa-times">teste</label>     
+            <h3>Trocar senha</h3>
+            <form action="#">
+                <div class="data-recupera">
+                    <label for="nome-recupera"></label>
+                    <input type="text" name="nome-recupera">
+                    <small>teste texto</small>
+                </div>
+                <div class="data-recupera">
+                    <label for="email-recupera" id=""></label for="" id="">
+                    <input type="email" name="email-recupera" placeholder="email@email.com">
+                    <small>teste texto</small>
+                </div>
+                <div class="data-recupera">
+                    <label for="senha-recupera" id=""></label for="" id="">
+                    <input type="text" name="senha-recupera">
+                    <small>teste texto</small>
+                </div>
+                <div class="data-recupera">
+                    <label for="senha2-recupera" id=""></label for="" id="">
+                    <input type="text" name="senha2-recupera">
+                    <small>teste texto</small>
+                </div>
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit" id="recupera">Recuperar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

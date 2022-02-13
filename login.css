@@ -17,24 +17,27 @@ input[type="checkbox"]{
     display: none;
 }
 .container{
-    display: none;
+    /* display: none; */
     width: 410px;
+    
     background: whitesmoke;
     padding: 30px;
+    box-sizing: border-box;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
     transition: 0.2s;
+
 }
 #show:checked ~ .container{
     display: block;
 }
-.container .close-btn{
+ .close-btn{
     position: absolute;
     right: 20px;
     top: 15px;
     font-size: 18px;
     cursor: pointer;
 }
-.container .close-btn:hover{
+ .close-btn:hover{
 color: #FDC501;
 }
 .container .texto{
@@ -44,6 +47,9 @@ color: #FDC501;
 }
 .container form{
     margin-top: -20px;
+}
+.form-login{
+    padding-top: 40px;
 }
 .container form .data{
     height: 45px;
@@ -197,6 +203,59 @@ form .login-link a:hover{
 .info-btn  a:hover{    
     text-decoration: underline;
 }
+.container-recupera{
+    /* display: none; */
+    width: 410px;
+    background: whitesmoke;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: all 0.7s;
+    
+}
+.container-recupera{ 
+    height: inherit;  
+    position: absolute;
+    top: 50%;
+    left: 180%;
+    transform: translate(-50%, -50%);
+}
+.container-recupera small{
+    margin-left: 1rem;
+    margin-top: 2px;
+}
+form .data-recupera{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+}
+form .data-recupera label{
+    font-size: 18px;
+}
+form .data-recupera input{
+    height: 100%;
+    width: 100%;
+
+    padding-left: 10px;
+    font-size: 17px;
+    border: 1px  silver;
+}
+
+.texto-recupera{
+    font-size: 18px;
+    color: #3498db;
+    text-decoration: none;
+    cursor: pointer;
+}
+.texto-recupera:hover{
+    text-decoration: underline;
+}
+#recupera:checked ~ .container-recupera{  
+    top: 50%;
+    left: 50%;
+    transition: all .5s;  
+}
+
 .invisivel{
     display: none;
 }
