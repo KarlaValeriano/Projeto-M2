@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/rodape.css">
     <link rel="stylesheet" href="assets/css/contato.css">
     <link rel="stylesheet" href="assets/css/cards.css">
-    <link rel="stylesheet" href="assets/css/caroulse.css">
+    <link rel="stylesheet" href="assets/css/carrocel.css">
     <link rel="stylesheet" href="assets/css/HomeMediaQ.css">
     <link rel="stylesheet" href="assets/css/produtos.css">
     <link rel="stylesheet" href="login.css">
@@ -56,38 +56,51 @@
                                 </a>
                             </li>
                             <li class="nav-item mx-4">
-                                <div class="form-login">                                    
+                                <div class="container-user invisivel">
+                                    <input type="checkbox" id="out">
+                                    <label for="out" class="user-btn" id="titulo-user">teste</label>
+                                    <div class="card-user">
+                                        <label for="out" class="close-btn fas fa-times"></label>
+                                        <div class="img-user">
+                                            <img class="" src="https://picsum.photos/200/200" alt="">
+                                        </div>
+                                        <div class="info-user">
+                                            <p id="saudacao-user"></p>
+                                        </div>
+                                        <div class="info-btn">
+                                            <a href="#" class="btn-user">Ver conta</a>
+                                        </div>
+                                        <div class="sair-btn">
+                                            <div class="inner"></div>
+                                            <button id="logout">Sair</button>                
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-login">
                                     <input type="checkbox" id="show">
                                     <label for="show" class="show-btn">Login</label>
                                     <div class="container">
                                         <label for="show" class="close-btn fas fa-times"></label>
-                                        <div class="texto">Login Form</div>
+                                        <div class="texto">Entre</div>
                                         <form action="#">
                                             <div class="data">
                                                 <label for="email">E-mail</label>
-                                                <div class="form-alerta">
-                                                    <input type="email" name="email" id="log-email" required>
-                                                    <small class="msg-email">teste de texto</small>
-                                                </div>
+                                                <input type="email" name="email" id="user-email" required>
+                                                <small id="msg-user"></small>
                                             </div>
                                             <div class="data">
                                                 <label for="senha">Senha</label>
-                                                <div class="form-alerta">
-                                                    <input type="password" name="senha" id="log-senha" required>
-                                                    <small class="msg-senha">teste de texto</small>
-                                                </div>
+                                                <input type="password" name="senha" id="user-senha" required>                                                
                                             </div>
                                             <div class="esqueceu-senha"><a href="#">Esqueceu a senha?</a></div>
                                             <div class="btn">
                                                 <div class="inner"></div>
-                                                <button type="submit">Login</button>
+                                               <button type="button" id="login">Login</button>
                                             </div>
-                                            <div class="login-link">Não possui conta? <a href="cadastro.html">Faça o
-                                                    cadastro</a>
-                                            </div>
+                                            <div class="login-link">Não possui conta? <a href="cadastro.html">Faça o cadastro</a></div>
                                         </form>
                                     </div>
-                                </div>
+                                </div> 
                             </li>
                         </ul>
                     </div>
@@ -109,22 +122,22 @@
             <div class="carousel-item active" data-bs-interval="3000">
                 <img src="assets/img/teste2.jpg" class="d-block car-img" alt="...">
                 <div class="carousel-caption d-none d-md-block box-img-car-descricao">
-                    <h5 class="titulo-car"></h5>
-                    <p></p>
+                    <h5 class="titulo-car">A melhor equipe ao seu dispor</h5>
+                    <p>Planos e assessoria com os especialistas do mercado</p>
                 </div>
             </div>
-            <div class="carousel-item" data-bs-interval="10000">
+            <div class="carousel-item" data-bs-interval="4000">
                 <img src="assets/img/teste.jpg" class="d-block  car-img" alt="...">
                 <div class="carousel-caption d-none d-md-block box-img-car-descricao">
                     <h5 class="titulo-car">Os nossos serviços na palma da sua mão</h5>
-                    <p>Suporte online 24 horas por dia de qualquer lugar.</p>
+                    <p>Suporte online 24 horas por dia de qualquer lugar. *</p>
                 </div>
             </div>
-            <div class="carousel-item" data-bs-interval="10000">
+            <div class="carousel-item" data-bs-interval="5000">
                 <img src="assets/img/teste3.jpg" class="d-block  car-img" alt="...">
                 <div class="carousel-caption d-none d-md-block box-img-car-descricao">
-                    <h5 class="titulo-car">Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h5 class="titulo-car">Resultado e comprometimento</h5>
+                    <p>Serviços desenvolvidos para atender suas necessidades com assertividade.</p>
                 </div>
             </div>
         </div>
@@ -139,7 +152,6 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
     <main>
         <section class="apresentacao-produto">
             <h1 class="titProd">Um novo conceito de soluções cibernéticas</h1>
@@ -159,8 +171,6 @@
         </section>
 
     </main>
-
-
     <footer>
         <div class="rodape">
 
@@ -168,8 +178,9 @@
                 <a href="contato.html">
                     <p>Contatos</p>
                 </a>
-
-                <p>serviços</p>
+                <a href="servicos.html">
+                    <p>serviços</p>
+                </a>                
             </div>
 
             <ul class="sociais">

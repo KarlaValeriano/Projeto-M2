@@ -16,21 +16,21 @@
 <body>
     <div class="container-user invisivel">
         <input type="checkbox" id="out">
-        <label for="out" class="show-btn">Olá Fulano</label>
+        <label for="out" class="show-btn" id="titulo-user">teste</label>
         <div class="card-user">
             <label for="out" class="close-btn fas fa-times"></label>
             <div class="img-user">
                 <img class="" src="https://picsum.photos/200/200" alt="">
             </div>
             <div class="info-user">
-                <p>Olá Fulano</p>
+                <p id="saudacao-user"></p>
             </div>
             <div class="info-btn">
                 <a href="#" class="btn-user">Ver conta</a>
             </div>
             <div class="sair-btn">
                 <div class="inner"></div>
-                <button id="logout">Sair</button>                
+                <button id="logout">Sair</button>
             </div>
         </div>
     </div>
@@ -52,12 +52,35 @@
                 <div class="esqueceu-senha"><a href="#">Esqueceu a senha?</a></div>
                 <div class="btn">
                     <div class="inner"></div>
-                   <button type="submit" id="login">Login</button>
+                    <button type="" id="login">Login</button>
                 </div>
                 <div class="login-link">Não possui conta? <a href="#">Faça o cadastro</a></div>
             </form>
         </div>
-    </div> 
+    </div>
+
+    <div class="form-recuperar">
+        <input type="checkbox" id="recupera">
+        <label for="recupera" class="recupera-btn">Login</label>
+        <div class="container">
+            <label for="recupera" class="close-btn fas fa-times"></label>
+            <div class="recupera-email">
+                <label for="email-recupera">Email</label>
+                <input type="email-recupera" name="email">
+                <small id="msg-email-recupera"></small>
+            </div>
+            <div class="recupera-senha">
+                <label for="recupera-senha2"></label>
+                <input type="password" id="recupera-senha">
+                <small id="msg-senha2-recupera"></small>
+            </div>
+            <div class="recupera-senha2">
+                <label for="recupera-senha2"></label>
+                <input type="text" id="recupera-senha2">
+                <small id="msg-senha2-recupera"></small>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

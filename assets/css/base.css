@@ -18,6 +18,7 @@ body{
     padding-top: 0!important;
 }
 .img-logo{
+    margin-left: 6rem;
     height: 11rem;
     width: 10rem;
 }
@@ -41,13 +42,13 @@ footer {
     justify-content: center;    
 }
 
-a {
-    color: #000000da;
+footer a {
+    color: #FDC501;
 }
 
-a:visited {
+/* a:visited {
     color: #000000da;
-}
+} */
 ::selection {
     background: #000000da;
     color: #000000da;

@@ -135,6 +135,7 @@
     background: #FDC501;
     color: #000000da;
     margin-top: -75px;
+    margin-right: auto;
   }
   
   .basic .btn button:hover{
@@ -153,6 +154,7 @@
     background: #000000da;
     color: #FDC501;
     margin-top: -75px;
+    margin-right: auto;
   }
   
   .premium .btn button:hover{
@@ -171,6 +173,7 @@
     background: rgb(254, 199, 1);
     color: #000000da;
     margin-top: -75px;
+    margin-right: auto;
   }
   
   .ultimate .btn button:hover{
