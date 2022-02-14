@@ -249,6 +249,10 @@ form .data-recupera{
 form .data-recupera label{
     font-size: 18px;
 }
+.data-recupera h4{
+    margin-top: 2rem;
+    text-align: center;
+}
 form .data-recupera input{
     height: 100%;
     width: 100%;

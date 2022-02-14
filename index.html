@@ -12,8 +12,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/usuario.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/usuario.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/formularioControle.js" defer></script>
+    <script src="assets/js/cadastro.js" defer></script>
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/rodape.css">
     <link rel="stylesheet" href="assets/css/contato.css">
@@ -108,28 +110,29 @@
                                         <h3>Trocar senha</h3>
                                         <form action="#">
                                             <div class="data-recupera">
-                                                <label for="nome-recupera"></label>
-                                                <input type="text" name="nome-recupera">
-                                                <small>teste texto</small>
+                                                <h4>Confirme seu e-mail</h4>
+                                                <!-- <label for="nome-recupera"></label>
+                                                <input type="text" name="nome-recupera" id="recupera-nome">
+                                                <small id="msg-recupera-nome">teste texto</small> -->
                                             </div>
                                             <div class="data-recupera">
-                                                <label for="email-recupera" id=""></label for="" id="">
-                                                <input type="email" name="email-recupera" placeholder="email@email.com">
-                                                <small>teste texto</small>
+                                                <label for="email-recupera" id=""></label>
+                                                <input type="email" name="email-recupera" id="recupera-email" placeholder="email@email.com">
+                                                <small id="msg-recupera-email">teste texto</small>
                                             </div>
                                             <div class="data-recupera">
-                                                <label for="senha-recupera" id=""></label for="" id="">
-                                                <input type="text" name="senha-recupera">
-                                                <small>teste texto</small>
+                                                <label for="senha-recupera" id=""></label>
+                                                <input type="password" name="senha-recupera" id="recupera-senha">
+                                                <small id="msg-recupera-senha"></small>
                                             </div>
                                             <div class="data-recupera">
-                                                <label for="senha2-recupera" id=""></label for="" id="">
-                                                <input type="text" name="senha2-recupera">
-                                                <small>teste texto</small>
+                                                <label for="senha2-recupera" id=""></label>
+                                                <input type="password" name="senha2-recupera" id="recupera-senha2">
+                                                <small id="msg-recupera-senha2"></small>
                                             </div>
                                             <div class="btn">
                                                 <div class="inner"></div>
-                                                <button type="" id="recupera">Recuperar</button>
+                                                <button id="recupera-btn">Recuperar</button>
                                             </div>
                                         </form>
                                     </div>
@@ -141,7 +144,6 @@
             </div>
         </nav>
     </header>
-
     <div id="carouselExampleCaptions" class="carousel slide carrocel" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
