@@ -35,8 +35,7 @@ $(document).ready(function () {
         )
     });
 
-    $("#recupera-btn").on('click', function(event){
-        event.preventDefault();
+    $("#recupera-btn").on('click', function(){
        usuario.trocaSenha($("#recupera-email").val());
     });
 });

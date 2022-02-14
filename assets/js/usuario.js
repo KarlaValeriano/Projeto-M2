@@ -29,9 +29,9 @@ class GerenciadorUsuario{
        let ok = teste._email == value && senhaOk;
             
         ok == false ? (
-            $("#msg-recupera-email").text(``)
+            $("#msg-recupera-email").text(`Dados inválidos`)           
           ): (              
-            $("#msg-recupera-email").text(`Dados inválidos`),
+            $("#msg-recupera-email").text(``),
             teste._senha = $("#recupera-senha").val(),
             localStorage.setItem('conta', JSON.stringify(teste))
             )
