@@ -39,10 +39,3 @@ class GerenciadorUsuario{
 
 
 }
-
-
-
-// let teste = JSON.parse(localStorage.getItem('conta'));
-
-
-

@@ -3,6 +3,7 @@ $(document).ready(function () {
     teste = usuario.buscaUsuario();
     $("#recupera-btn").attr('disabled', true);
     $("#saudacao-user").text(`Olá ${teste._nome}`);
+    $(".subtitulos").text(`${teste._nome}`);
 
     teste == '' ? (
         $("user-btn").text(`Login`),
@@ -39,7 +40,3 @@ $(document).ready(function () {
        usuario.trocaSenha($("#recupera-email").val());
     });
 });
-
-
-
-

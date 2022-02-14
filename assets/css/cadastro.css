@@ -2,28 +2,21 @@
     padding-top: 160px;
     color: black;
 }
-
-
 .form-secao{
     width: 100%;
 }
-
 form{
     padding: 3rem!important;
     width: 75%;
 }
-
-
 .usuario{
     display: grid;
     gap: 1rem;
 }
-
 .senha{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
 .endereco{
     margin-top: 1rem;
     width: 100%;
@@ -31,7 +24,6 @@ form{
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
 fieldset{
     width: 100%;     
 }

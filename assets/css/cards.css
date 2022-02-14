@@ -4,7 +4,6 @@
     width: 70%;
     height: fit-content;
   }
-
 .wrapper{
     max-width: 1090px;
     width: 100%;
@@ -35,7 +34,7 @@
   }
   
   .aj_p{
-    text-align: justify;
+    text-align: center;
   }
   
   p.aj_des {
@@ -55,8 +54,7 @@
     text-align: center;
     color: #fff;
     position: relative;
-  }
-  
+  }  
   .price-area .inner-area .text{
     font-size: 25px;
     font-weight: 400;
