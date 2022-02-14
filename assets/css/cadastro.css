@@ -1,12 +1,56 @@
-form{
-    width: 80%;
-    margin-left:  1.222rem;
-    padding: 2rem 0;
-   
+.pagina-cadastro{
+    padding-top: 160px;
+    color: black;
 }
+
+
+.form-secao{
+    width: 100%;
+}
+
+form{
+    padding: 3rem!important;
+    width: 75%;
+}
+
+
+.usuario{
+    display: grid;
+    gap: 1rem;
+}
+
+.senha{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.endereco{
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 fieldset{
     width: 100%;     
 }
+.usuario{
+    display: grid;
+    gap: 1rem;
+}
+.senha{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.endereco{
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .img-alerta{    
     height: 1rem;
 }
@@ -14,9 +58,22 @@ fieldset{
 .erro{
   box-shadow:inset 0 120px 1px rgba(236, 25, 25, 0.08)!important;
 }
+
 .certo{
     box-shadow:inset 0 120px 1px rgba(16, 195, 31, 0.08)!important;
   }
+  
 .olhinho{
-    height: 1rem;
+    padding: 1rem 0;   
+    border: #ced4da;
+    width: 27px;
+    height: auto;
+    
+    margin-top: 0!important;
+
+    cursor: pointer;
 }
+.form-submit{
+    margin-top: 1rem;
+}
+

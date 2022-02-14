@@ -10,7 +10,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/usuario.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="assets/css/rodape.css">
     <link rel="stylesheet" href="assets/css/contato.css">
     <link rel="stylesheet" href="assets/css/cards.css">
@@ -24,63 +28,131 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid" style="background-color:#FDC501;">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <h1> <img src="assets/img/logo.png" class="img-logo"> Cyber Pereirão</h1>
                 </a>
-
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     class="navbar-toggler" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <div class="navbar-nav">
-                        <li class="nav-item mx-4">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <h4>Home</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-4">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <h4>Serviços</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-4">
-                            <a href="contato.html" class="nav-link active" aria-current="page" href="#">
-                                <h4>Contatos</h4>
-                            </a>
-                        </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" aria-current="page" href="index.html">
+                                    <h4>Home</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" aria-current="page" href="servicos.html">
+                                    <h4>Serviços</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a href="contato.html" class="nav-link active" aria-current="page" href="contato.html">
+                                    <h4>Contatos</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <div class="container-user invisivel">
+                                    <input type="checkbox" id="out">
+                                    <label for="out" class="user-btn" id="titulo-user">teste</label>
+                                    <div class="card-user">
+                                        <label for="out" class="close-btn fas fa-times"></label>
+                                        <div class="img-user">
+                                            <img class="" src="https://picsum.photos/200/200" alt="">
+                                        </div>
+                                        <div class="info-user">
+                                            <p id="saudacao-user"></p>
+                                        </div>
+                                        <div class="info-btn">
+                                            <a href="#" class="btn-user">Ver conta</a>
+                                        </div>
+                                        <div class="sair-btn">
+                                            <div class="inner"></div>
+                                            <button id="logout">Sair</button>                
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-login">
+                                    <input type="checkbox" id="show">
+                                    <label for="show" class="show-btn">Login</label>
+                                    <div class="container">
+                                        <label for="show" class="close-btn fas fa-times"></label>
+                                        <div class="texto">Entre</div>
+                                        <form action="#">
+                                            <div class="data">
+                                                <label for="email">E-mail</label>
+                                                <input type="email" name="email" id="user-email" required>
+                                                <small id="msg-user"></small>
+                                            </div>
+                                            <div class="data">
+                                                <label for="senha">Senha</label>
+                                                <input type="password" name="senha" id="user-senha" required>                                                
+                                            </div>
+                                            <label for="recupera" class="texto-recupera">Esqueceu a senha?</label>
+                                            <div class="btn">
+                                                <div class="inner"></div>
+                                               <button type="button" id="login">Login</button>
+                                            </div>
+                                            <div class="login-link">Não possui conta? <a href="cadastro.html">Faça o cadastro</a></div>
+                                        </form>
+                                    </div>
+                                </div> 
+                                <div class="form-recupera">
+                                    <input type="checkbox" id="recupera">                                                 
+                                    <div class="container-recupera">
+                                        <label for="recupera" class="close-btn fas fa-times"></label>     
+                                        <h3>Trocar senha</h3>
+                                        <form action="#">
+                                            <div class="data-recupera">
+                                                <h4>Confirme seu e-mail</h4>
+                                                <!-- <label for="nome-recupera"></label>
+                                                <input type="text" name="nome-recupera" id="recupera-nome">
+                                                <small id="msg-recupera-nome">teste texto</small> -->
+                                            </div>
+                                            <div class="data-recupera">
+                                                <label for="email-recupera" id=""></label>
+                                                <input type="email" name="email-recupera" id="recupera-email" placeholder="email@email.com">
+                                                <small id="msg-recupera-email">teste texto</small>
+                                            </div>
+                                            <div class="data-recupera">
+                                                <label for="senha-recupera" id=""></label>
+                                                <input type="password" name="senha-recupera" id="recupera-senha">
+                                                <small id="msg-recupera-senha"></small>
+                                            </div>
+                                            <div class="data-recupera">
+                                                <label for="senha2-recupera" id=""></label>
+                                                <input type="password" name="senha2-recupera" id="recupera-senha2">
+                                                <small id="msg-recupera-senha2"></small>
+                                            </div>
+                                            <div class="btn">
+                                                <div class="inner"></div>
+                                                <button id="recupera-btn">Recuperar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-
                 </div>
             </div>
         </nav>
     </header>
-
-
     <section class="container-servico">
             
-        <div class="caixa-servicos">
-            
-            <img id="mundoweb" src="./assets/img/mundoweb.png " alt="Imagem relacionando planeta e internet">
-            
-            <h1 id="titulo-caixa">NOSSOS SERVIÇOS</h1>
-            
-        </div>    
-                        
+        <div class="caixa-servicos">            
+            <img id="mundoweb" src="./assets/img/mundoweb.png " alt="Imagem relacionando planeta e internet">            
+            <h1 id="titulo-caixa">NOSSOS SERVIÇOS</h1>            
+        </div>                        
         <h4 class="subtitulo-servico" id="titulo-01">Cyber Pereirão se especializou em tecnologia e ambiente virtual, e agora oferece o melhor das 03 áreas mais procuradas no mercado digital:</h4>
-
         <ul class="lista-servico">
             <li class="item-lista-servico">Cybersegurança</li>
             <li class="item-lista-servico">Desenvolvimento Web</li>
             <li class="item-lista-servico">Designer de Interface de Usuário | UX/UI</li> 
         </ul>
-
     </section>
 
     <section class="container-servico">
@@ -166,7 +238,7 @@
                 <div class="head_tab"><h2><br>Double Pereira</h2></div>
                 <div class="aj_p"><p>Nosso combo duplo abrange 02 dos nossos serviços, à sua escolha, por apenas 
                 </p></div>
-                <div class="ribbon"><span>Indicação da Pereira</span></div>
+                <div class="ribbon"><span>Promocional!</span></div>
                 <div class="price-section">
                     <div class="price-area">
                         <div class="inner-area">
@@ -208,19 +280,23 @@
     <footer>
         <div class="rodape">
             <div class="text">
-                <a href="contato.html" >
+                <a href="contato.html" id="cont">
                     <p>Contatos</p>
-                </a>       
-        
-            <p>serviços</p>
-        </div>     
-            <ul class="sociais">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-        </div>
+                </a>
+                <a href="servicos.html">
+                    <p>Serviços</p>
+                </a>
 
+            </div>
+            <div>
+                <p style="padding-left: 30px">Siga-nos</p>
+                <ul class="sociais">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
         <div class="copy">
             <p> Cyber Pereirão &copy; Todos os direitos reservados 2022</p>
         </div>

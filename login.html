@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-user invisivel">
+        <input type="checkbox" id="out">
+        <label for="out" class="show-btn" id="titulo-user">teste</label>
+        <div class="card-user">
+            <label for="out" class="close-btn fas fa-times"></label>
+            <div class="img-user">
+                <img class="" src="https://picsum.photos/200/200" alt="">
+            </div>
+            <div class="info-user">
+                <p id="saudacao-user"></p>
+            </div>
+            <div class="info-btn">
+                <a href="#" class="btn-user">Ver conta</a>
+            </div>
+            <div class="sair-btn">
+                <div class="inner"></div>
+                <button id="logout">Sair</button>
+            </div>
+        </div>
+    </div>
+    <div class="form-login">
+        <input type="checkbox" id="show">        
+        <label for="show" class="show-btn">Login</label>
+        <div class="container">
+            <label for="show" class="close-btn fas fa-times"></label>
+            <div class="texto">Login Form</div>
+            <form action="#" class="form-teste">
+                <div class="data">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="data">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" required>
+                </div>
+                <div class="esqueceu-senha">
+                    <label for="recupera" class="texto-recupera">Esqueceu a senha?</label>
+                </div>
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit" id="login">Login</button>
+                </div>
+                <div class="login-link">Não possui conta? <a href="#">Faça o cadastro</a></div>
+            </form>
+        </div>
+    </div>
+   
+    <div class="form-recupera">
+        <input type="checkbox" id="recupera">                                                 
+        <div class="container-recupera">
+            <label for="recupera" class="close-btn fas fa-times"></label>     
+            <h3>Trocar senha</h3>
+            <form action="#">
+                <div class="data-recupera">
+                    <label for="nome-recupera"></label>
+                    <input type="text" name="nome-recupera">
+                    <small>teste texto</small>
+                </div>
+                <div class="data-recupera">
+                    <label for="email-recupera" id=""></label for="" id="">
+                    <input type="email" name="email-recupera" placeholder="email@email.com">
+                    <small>teste texto</small>
+                </div>
+                <div class="data-recupera">
+                    <label for="senha-recupera" id=""></label for="" id="">
+                    <input type="text" name="senha-recupera">
+                    <small>teste texto</small>
+                </div>
+                <div class="data-recupera">
+                    <label for="senha2-recupera" id=""></label for="" id="">
+                    <input type="text" name="senha2-recupera">
+                    <small>teste texto</small>
+                </div>
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit" id="recupera">Recuperar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

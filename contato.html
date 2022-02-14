@@ -10,11 +10,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/usuario.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/contato.css">
     <link rel="stylesheet" href="assets/css/rodape.css">
     <link rel="stylesheet" href="assets/css/cards.css">
     <link rel="stylesheet" href="assets/css/caroulse.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="assets/css/HomeMediaQ.css">
     <title>Cyber Pereirão | Home</title>
 </head>
@@ -22,177 +26,259 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid" style="background-color:#FDC501;">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <h1> <img src="assets/img/logo.png" class="img-logo"> Cyber Pereirão</h1>
                 </a>
-
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     class="navbar-toggler" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <div class="navbar-nav">
-                        <li class="nav-item mx-4">
-                            <a href="index.html" class="nav-link active" aria-current="page" href="#">
-                                <h4>Home</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-4">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <h4>Serviços</h4>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-4">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <h4>Contatos</h4>
-                            </a>
-                        </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" aria-current="page" href="index.html">
+                                    <h4>Home</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" aria-current="page" href="servicos.html">
+                                    <h4>Serviços</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a href="contato.html" class="nav-link active" aria-current="page" href="contato.html">
+                                    <h4>Contatos</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <div class="container-user invisivel">
+                                    <input type="checkbox" id="out">
+                                    <label for="out" class="user-btn" id="titulo-user">teste</label>
+                                    <div class="card-user">
+                                        <label for="out" class="close-btn fas fa-times"></label>
+                                        <div class="img-user">
+                                            <img class="" src="https://picsum.photos/200/200" alt="">
+                                        </div>
+                                        <div class="info-user">
+                                            <p id="saudacao-user"></p>
+                                        </div>
+                                        <div class="info-btn">
+                                            <a href="#" class="btn-user">Ver conta</a>
+                                        </div>
+                                        <div class="sair-btn">
+                                            <div class="inner"></div>
+                                            <button id="logout">Sair</button>                
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-login">
+                                    <input type="checkbox" id="show">
+                                    <label for="show" class="show-btn">Login</label>
+                                    <div class="container">
+                                        <label for="show" class="close-btn fas fa-times"></label>
+                                        <div class="texto">Entre</div>
+                                        <form action="#">
+                                            <div class="data">
+                                                <label for="email">E-mail</label>
+                                                <input type="email" name="email" id="user-email" required>
+                                                <small id="msg-user"></small>
+                                            </div>
+                                            <div class="data">
+                                                <label for="senha">Senha</label>
+                                                <input type="password" name="senha" id="user-senha" required>                                                
+                                            </div>
+                                            <label for="recupera" class="texto-recupera">Esqueceu a senha?</label>
+                                            <div class="btn">
+                                                <div class="inner"></div>
+                                               <button type="button" id="login">Login</button>
+                                            </div>
+                                            <div class="login-link">Não possui conta? <a href="cadastro.html">Faça o cadastro</a></div>
+                                        </form>
+                                    </div>
+                                </div> 
+                                <div class="form-recupera">
+                                    <input type="checkbox" id="recupera">                                                 
+                                    <div class="container-recupera">
+                                        <label for="recupera" class="close-btn fas fa-times"></label>     
+                                        <h3>Trocar senha</h3>
+                                        <form action="#">
+                                            <div class="data-recupera">
+                                                <h4>Confirme seu e-mail</h4>
+                                                <!-- <label for="nome-recupera"></label>
+                                                <input type="text" name="nome-recupera" id="recupera-nome">
+                                                <small id="msg-recupera-nome">teste texto</small> -->
+                                            </div>
+                                            <div class="data-recupera">
+                                                <label for="email-recupera" id=""></label>
+                                                <input type="email" name="email-recupera" id="recupera-email" placeholder="email@email.com">
+                                                <small id="msg-recupera-email">teste texto</small>
+                                            </div>
+                                            <div class="data-recupera">
+                                                <label for="senha-recupera" id=""></label>
+                                                <input type="password" name="senha-recupera" id="recupera-senha">
+                                                <small id="msg-recupera-senha"></small>
+                                            </div>
+                                            <div class="data-recupera">
+                                                <label for="senha2-recupera" id=""></label>
+                                                <input type="password" name="senha2-recupera" id="recupera-senha2">
+                                                <small id="msg-recupera-senha2"></small>
+                                            </div>
+                                            <div class="btn">
+                                                <div class="inner"></div>
+                                                <button id="recupera-btn">Recuperar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        
-       
         <section class="apresentaçao">
             <h2> Contato da Equipe:</h2>
 
-        
-        <div  id ="contato">
-            <div class="card" id="karla">
-                <h3>Karla Valeriano</h3> 
-                <hr>
-                <img id="picture" src="assets/img/imagens de contato/karla1.jpg" alt="" srcset="">
-            <div >
-             <ul class="listacontato">
-                 <li ><a href="https://github.com/KarlaValeriano" target="blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
 
-                 </a></li>
-                 <li><a href="https://www.linkedin.com/in/karla-valeriano-b01a351b8/"  target="blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                     
-                 </li>
-               
-             </ul>
+            <div id="contato">
+                <div class="card" id="karla">
+                    <h3>Karla Valeriano</h3>
+                    <hr>
+                    <img id="picture" src="assets/img/imagens de contato/karla1.jpg" alt="" srcset="">
+                    <div>
+                        <ul class="listacontato">
+                            <li><a href="https://github.com/KarlaValeriano" target="blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://www.linkedin.com/in/karla-valeriano-b01a351b8/" target="blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" id="Rafael">
+                    <h3>Rafael Henrique</h3>
+                    <hr>
+                    <img id="picture" src="assets/img/imagens de contato/raphael.jpeg" alt="" srcset="">
+                    <div>
+                        <ul class="listacontato">
+                            <li><a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z" />
+                                    </svg>
+                                </a></li>
+                            <li><a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" id="eduardo">
+                    <h3>Eduardo Moreira</h3>
+                    <br>
+                    <img id="picture" src="assets/img/imagens de contato/Eduardo.jpg" alt="" srcset="">
+                    <div>
+                        <ul class="listacontato">
+                            <li><a href="https://github.com/Moreira-Edu" target="blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://www.linkedin.com/in/edu-moreira-aa9304226/" target="blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
 
-            </div>
-            </div>
-            <div class="card" id="Rafael">
-                <h3>Rafael Henrique</h3> 
-                <hr>
-                <img id="picture" src="assets/img/imagens de contato/raphael.jpeg" alt="" srcset="">
-            <div >
-             <ul class="listacontato">
-                 <li ><a>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" id="Emmanuel">
+                    <h3>Emmanuel Galli</h3>
+                    <hr>
+                    <img id="picture" src="assets/img/imagens de contato/Emmanuel.jpg" alt="" srcset="">
+                    <div>
+                        <ul class="listacontato">
+                            <li><a href="https://github.com/EmmanuelGalli" target="blank">
 
-                 </a></li>
-                 <li><a>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                     
-                 </li>
-               
-             </ul>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://www.linkedin.com/in/emmanuelgallibr" target="blank">
 
-            </div>
-            </div>
-            <div class="card" id="eduardo">
-                <h3>Eduardo Moreira</h3> 
-              <br>
-                <img  id="picture" src="assets/img/imagens de contato/Eduardo.jpg" alt="" srcset="">
-                <div >
-                    <ul class="listacontato">
-                        <li ><a href="https://github.com/Moreira-Edu"  target="blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" id="marcilane">
+                    <h3>Marcilane de Souza </h3>
+                    <hr>
+                    <img id="picture" src="assets/img/imagens de contato/marcilane.jpg" alt="" srcset="">
+                    <div>
+                        <ul class="listacontato">
+                            <li><a href="https://github.com/MarcilaneSouza">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z" />
+                                    </svg>
 
-                        </a></li>
-                        <li><a href= "https://www.linkedin.com/in/edu-moreira-aa9304226/"  target="blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a></li>
+                            <li><a href="https://www.linkedin.com/in/marcilane-souza-lima-9427bb69/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24">
+                                        <path
+                                            d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
 
-                        </a></li>
-                      
-                    </ul>
-       
-                   </div>
-            </div>
-            <div class="card" id="Emmanuel">
-                <h3>Emmanuel Galli</h3> 
-                <hr>
-                <img  id="picture" src="assets/img/imagens de contato/Emmanuel.jpg" alt="" srcset="">
-                <div >
-                    <ul class="listacontato">
-                        <li ><a href="https://github.com/EmmanuelGalli" target="blank">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
-
-                        </a></li>
-                        <li><a href= "https://www.linkedin.com/in/emmanuelgallibr"  target="blank">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg>
-
-                        </a></li>
-                      
-                    </ul>
-       
-                   </div>
-            </div>
-            <div class="card" id="marcilane">
-                <h3>Marcilane de Souza </h3> 
-                <hr>
-                <img  id="picture" src="assets/img/imagens de contato/marcilane.jpg" alt="" srcset="">
-                <div >
-                    <ul class="listacontato">
-                        <li ><a href="https://github.com/MarcilaneSouza">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
-
-                        </a></li>
-                        <li><a href="https://www.linkedin.com/in/marcilane-souza-lima-9427bb69/">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="imagem" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg>
-
-                        </a></li>
-                      
-                    </ul>
-       
-                   </div>
-            </div>
-           
-    </section>
-
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
     </main>
     <footer>
         <div class="rodape">
-          <div class="text">
-            <a href="contato.html" >
-              <p>Contatos</p>
-            </a>       
-          
-          <p>serviços</p>
-        </div>     
-          <ul class="sociais">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          </ul>
-  
+            <div class="text">
+                <a href="contato.html" id="cont">
+                    <p>Contatos</p>
+                </a>
+                <a href="servicos.html">
+                    <p>Serviços</p>
+                </a>
+
+            </div>
+            <div>
+                <p style="padding-left: 30px">Siga-nos</p>
+                <ul class="sociais">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
         </div>
         <div class="copy">
-        <p> Cyber Pereirão &copy; Todos os direitos reservados 2022</p>
-      </div>
-      </footer>
+            <p> Cyber Pereirão &copy; Todos os direitos reservados 2022</p>
+        </div>
+    </footer>
 </body>
-                    
-                   
-            
-
-          
-
-    

@@ -18,8 +18,9 @@ body{
     padding-top: 0!important;
 }
 .img-logo{
-    height: 10rem;
-    width: 12rem;
+    margin-left: 6rem;
+    height: 11rem;
+    width: 10rem;
 }
 
 div{
@@ -28,6 +29,22 @@ div{
 
 main{
     width: 100%;
+}
+
+
+footer a {
+    color: #FDC501;
+}
+
+/* a:visited {
+    color: #000000da;
+} */
+::selection {
+    background: #000000da;
+    color: #000000da;
+}
+.invisivel{
+    display: none;
 }
 footer {
     color: #FDC501;
@@ -40,11 +57,6 @@ footer {
     align-items: center;
     justify-content: center;    
 }
-
-a {
-    color: #000000da;
-}
-
-a:visited {
-    color: #000000da;
+#cont{
+    color:#FDC501;
 }
