@@ -21,9 +21,6 @@ class GerenciadorUsuario{
         $(".container-user").addClass('invisivel');
         $(".form-login").removeClass('invisivel');
     }
-    chamar() {
-        console.log(this.teste._email);
-    }
     trocaSenha(value){
         let senhaOk = $("#recupera-senha").val() == $("#recupera-senha2").val()
        let ok = teste._email == value && senhaOk;

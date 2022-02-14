@@ -26,7 +26,6 @@ $(document).ready(function () {
     $("#recupera-senha").keyup(function(){
         let senha = $("#recupera-senha").val();
         let senhaForte = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/;
-        console.log(senhaForte.test(senha));
         senhaForte.test(senha) ?(
             $("#msg-recupera-senha").text(`Senha forte`),
             $("#recupera-btn").attr('disabled', false)           
