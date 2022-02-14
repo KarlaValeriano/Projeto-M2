@@ -29,17 +29,7 @@ div{
 main{
     width: 100%;
 }
-footer {
-    color: #FDC501;
-    background-color: #000000da;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;    
-}
+
 
 a {
     color: #000000da;
@@ -54,4 +44,18 @@ a:visited {
 }
 .invisivel{
     display: none;
+}
+footer {
+    color: #FDC501;
+    background-color: #000000da;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+#cont{
+    color:#FDC501;
 }
