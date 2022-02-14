@@ -23,6 +23,7 @@
 
 #titulo-caixa {
     margin-left: 1rem;
+    text-shadow: 2px 1px 1px#FDC501;
 }
 
 .titulo-servico {
@@ -30,6 +31,7 @@
     text-align: center;
     font-size: 2em;
     margin-bottom: 1.5rem;
+    text-shadow: 2px 1px 1px#FDC501;
 }
 
 .subtitulo-servico {
