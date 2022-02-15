@@ -33,6 +33,4 @@ class GerenciadorUsuario{
             localStorage.setItem('conta', JSON.stringify(teste))
             )
     }
-
-
 }
