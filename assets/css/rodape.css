@@ -2,7 +2,7 @@
 .rodape{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 30rem;
+  
 }
 a{
     text-decoration: none;

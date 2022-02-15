@@ -1,0 +1,27 @@
+@media screen and (max-width: 700px){
+    body{
+        height: 100vh;
+        width: 100%;
+        padding-top: 20px;
+    }
+    main{
+        margin: 0 0;
+        height: 100vh;
+    }
+    .container-recupera {
+        height: inherit;
+        position: absolute;
+        top: -200%;
+        left: -200%;
+        transform: translate(-50%, -50%);
+    }
+    #perfil{
+        width: 50%;
+    }
+    #servicos{
+        width: 50%;
+    }
+#recupera{
+    display: none;
+}
+}

@@ -37,15 +37,6 @@ div{
 main{
     width: 100%;
 }
-
-
-/* footer a {
-    color: #FDC501;
-} */
-
-/* a:visited {
-    color: #000000da;
-} */
 ::selection {
     background: #000000da;
     color: #000000da;
@@ -54,6 +45,7 @@ main{
     display: none;
 }
 footer {
+    box-sizing: border-box;
     color: #FDC501;
     background-color: #000000da;
     width: 100%;
